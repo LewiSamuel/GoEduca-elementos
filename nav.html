@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<meta charset="utf-8">
 <head>
+<meta charset="utf-8">
+<style type="text/css">
+  .search-bar{
+    border: 1px solid #EEE;
+  }
+</style>
+
 	<title>NAV-TOP</title>
 	
 	<!--Import Google Icon Font-->
@@ -14,24 +20,68 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="grey lighten-5">
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
    	
 
 
-  <nav class="nav-extended" style="background-color: #39a3bb;">
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#sobre-aba" class="active">Sobre</a></li>
-        <li class="tab"><a href="#propostas-aba">Propostas</a></li>
-        <li class="tab"><a href="#equipe-aba">Equipe</a></li>
-        <li class="tab"><a href="#calendario-aba">Calendário</a></li>
-        <li class="tab"><a href="#contato-aba">Contato</a></li>
+
+  <nav class=" white">
+    <section class="container">
+    <div class="row nav-wrapper white">
+      <a href="#" class="brand-logo grey-text text-darken-2"><b>Go Educa</b></a>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+     
+      <!-- <ul style="border: 1px solid #eee">
+        <li>
+          <form>
+            <input type="text" name="" class="grey-text text-darken-1" style="margin-bottom: auto;" placeholder="Pesquise aqui">
+          </form>
+        </li>
+        <li>
+          <i class="material-icons grey-text text-darken-2">search</i>
+        </li>
+      </ul> -->
+      <li>
+        <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" class="grey-text text-darken-1" required style="margin-bottom: auto;" placeholder="Pesquise aqui">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+      </li>
+
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+            <span class="material-icons">file_upload</span>
+          </a>
+        </li>
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+            <span class="material-icons">apps</span>
+          </a>
+        </li>
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+            <span class="material-icons">notifications</span>
+          </a>
+        </li>
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+              <img class="circle" src="rsz_lewi.jpg" width="35px" style="margin-top: 12px;margin-bottom: -12px;">
+          </a>
+        </li>
       </ul>
     </div>
+    </section>
   </nav>
+        
  
 
 
