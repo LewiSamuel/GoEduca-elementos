@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<head>
+	<title>Chapa Autômata</title>
+	<style type="text/css">
+		@-webkit-keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; } 
+		}
+		@-moz-keyframes fadeIn {
+		0% { opacity: 0;}
+		100% { opacity: 1; }
+		}
+		@-o-keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+		}
+		@keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+		}
+
+
+		body, html{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			justify-content: center;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+    		/*font-family: GillSans, Calibri, Trebuchet, sans-serif;*/
+		}
+		header{
+			width: 100%;
+			background-color: #39a3bb;
+			align-items: center;
+			display: flex;
+			max-height: 100%;
+			overflow: hidden;
+			flex-direction: column;
+		}
+		*{
+		    transition: 1s;
+			font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+			-webkit-animation: fadeIn 1s ease-in-out;
+			-moz-animation: fadeIn 1s ease-in-out;
+			-o-animation: fadeIn 1s ease-in-out;
+			animation: fadeIn 1s ease-in-out;
+		}
+		img{
+			text-align: center;
+		  	align-self: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+    		display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    margin: auto;
+		    height: auto;
+		    width: 70%;
+		    max-width: 500px;
+		}
+		.white{
+			background-color: white;
+			overflow: hidden;
+		}
+		p{
+			font-size: 16px;
+		}
+		#break-gif{
+			background-image: url("https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif");
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: bottom center;
+			height: 350px;
+			width: 100%;
+		}
+		#proposta:hover{
+			background-color: rgba(255,255,255,0.01);
+			/*cursor: pointer;*/
+		}
+		#proposta ol{
+			text-align: left;
+			font-size: 12px;
+		}
+		.ocultar{
+			display: none;
+		}
+		.proposta{
+			/*border-bottom: 1px solid #39a3bb;*/
+		}
+		nav{
+			background-color: #39a3bb;
+		}
+		section .container{
+			padding-top: 50px; 
+			padding-bottom: 50px;
+		}
+		.pessoa{
+			display: flex;
+			flex-direction: column;
+		}
+		.img-perfil, .img-perfil2{
+			background-size: cover;
+			background-position: center;
+			border: 3px solid white;
+		}
+		.img-perfil{
+			width: 250px;
+			height: 250px;
+			margin: 15px auto 10px auto;
+			border-radius: 150px;
+		}
+		.img-perfil2{
+			width: 150px;
+			height: 150px;
+			margin: 15px auto 10px auto;
+			border-radius: 150px;
+		}
+		.cargo{
+			background-color: white;
+			overflow: hidden;
+			padding: 5px 15px;
+			color: black;
+			margin: -15px auto 0px auto;
+			font-size: 16px;
+		}
+		.nome{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.dia{padding: 30px 0 !important;}
+		.destaque{
+			border: 1px solid #39a3bb;
+			color: #39a3bb;
+		}
+		.dia .titulo{font-size: 20px}
+		.dia p{font-size: 14px}
+
+		.destaque .titulo{font-size: 25px}
+		.destaque p{font-size: 20px}
+
+	</style> 
+
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+   	
+
+	<header>
+		<img src="automata.png" class="col s12 m6">
+	</header>
+
+  <nav class="nav-extended" style="background-color: #39a3bb;">
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#sobre-aba" class="active">Sobre</a></li>
+        <li class="tab"><a href="#propostas-aba">Propostas</a></li>
+        <li class="tab"><a href="#equipe-aba">Equipe</a></li>
+        <li class="tab"><a href="#calendario-aba">Calendário</a></li>
+        <li class="tab"><a href="#contato-aba">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+ 
+
+	<section class="grey darken-4 white-text" style="overflow: hidden;">
+		<div class="container">
+			
+			<div id="sobre-aba" class="col s12">
+				<!-- SOBRE -->
+				<h3>Para gestão do <b>CACOMP</b><br>
+				vote na <b>CHAPA AUTÔMATA!</b></h3>
+
+				<p>Assim como a definição de autômato, a <b>Chapa Autômata</b> é uma alusão à uma máquina metafórica que se opera de maneira automática, pois quando se tem metas, é automático querer alcança-las!</p>
+				<p>O nome da chapa remete ao principal conteúdo abordado no curso, e sua cor azul traz referências ao mascote da Chapa, o Mr. Meeseeks (Rick & Morty), que assim como a chapa, é alguém que veio ajudar, se dedicando ao máximo para a execução com excelência das metas. Chegamos para mudar o espaço dos alunos dos cursos de computação (Bacharel e Licenciatura). <h5 style="font-weight: bold;">Criaremos uma nova realidade, melhor e mais inovadora com a cara do curso!</h5></p>
+			</div>
+			<div id="propostas-aba" class="col s12">
+		  	 <!-- PROPOSTAS -->
+		  	 	<h4 style="color: gray; font-weight: bold;">Nossas propostas</h4>
+				<div class="row">
+
+
+				<div class="col s12 m4" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">settings</i>
+							 <p><b>Limpeza e manutenção</b></p>
+						</div>
+						<ol class="propostaa">
+							<li>Limpeza imediata e periódica</li>
+							<li>Conserto dos sofás </li>
+							<li>Conserto e instalação de tomadas</li>
+							<li>Reutilização dos armários</li>
+							<li>Conserto das câmeras de segurança</li>
+							<li>Conserto da geladeira</li>
+							<li>Conserto do microondas</li>
+							<li>Conserto das cadeiras</li>
+							<li>Restaurar placa de identificação do CA</li>
+						</ol>
+				</div>
+
+
+				<div class="col s12 m4" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">accessibility</i>
+							 <p><b>Ambiente amigável para os alunos da computação</b></p>
+						</div>
+						<ol class="propostab">
+							<li>Maior acompanhamento dos calouros </li>
+							<li>Maior representatividade das minorias</li>
+							<li>Ativar página do CACOMP</li>
+							<li>Mais interação gestão / aluno </li>
+							<li>Fim da página “Todo dia uma foto do CACOMP fechado”</li>
+						</ol>
+				</div>
+
+				<div class="col s12 m4" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">group</i>
+							 <p><b>Maior promoção de eventos gerais, desportivos e E-sports </b></p>
+						</div>
+						<ol class="propostac">
+							<li>Campeonatos de videogames</li>
+							<li>Criação da atlética</li>
+							<li>Continuação dos campeonatos de computsal</li>
+							<li>Cine CACOMP</li>
+							<li>Maior variedade de venda de produtos </li>
+							<li>Agenda de disponibilidade e eventos do CA</li>
+						</ol>
+				</div>
+
+
+				
+
+				</div>
+
+				<div class="row">
+					<div class="col s12 m6" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">notifications_active</i>
+							 <p><b>Inovações</b></p>
+						</div>
+						<ol class="propostae">
+							<li>Cafeteira e bolacha</li>
+							<li>Caixa de reclamações do curso</li>
+							<li>PC com vários emuladores para games.</li>
+						</ol>
+				</div>
+
+				<div class="col s12 m6" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">business_center</i>
+							 <p><b>Centralização de questões acadêmicas e profissionais</b></p>
+						</div>
+						<ol class="propostad">
+							<li>Mural de estágios (físico e online)</li>
+							<li>Banco de provas / materiais de estudo (online)</li>
+							<li>Sistema de monitorias</li>
+						</ol>
+				</div>
+
+				</div>
+
+
+		  </div>
+		  
+		  <div id="equipe-aba" class="col s12">
+		  	<!-- EQUIPE -->
+				<h4 style="color: gray; font-weight: bold;">Diretoria</h4>
+				<div class="row">
+					<section class="col s12 m6">
+						<div class="pessoa">
+					    	<div class="img-perfil" style="background-image: url('img-peoples/jaque.jpeg'); background-position: top center;"></div>
+					    	<div class="cargo">Presidente</div>
+					    	<div class="nome">Jaqueline Gutierri</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m6">
+				    	<div class="pessoa">
+					    	<div class="img-perfil" style="background-image: url('img-peoples/vitor.jpeg');"></div>
+					    	<div class="cargo">Vice-presidente</div>
+					    	<div class="nome">Vitor Dellamora</div>
+				    	</div>
+				    </section>
+			    </div>
+			    <div class="row">
+				    <section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/thalles.jpeg');"></div>
+					    	<div class="cargo">Tesoureiro</div>
+					    	<div class="nome">Thalles Menezes</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/day.jpeg');"></div>
+					    	<div class="cargo">Secretária</div>
+					    	<div class="nome">Dayanne Fernandes</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/lemos.jpeg');"></div>
+					    	<div class="cargo">Infraestrutura</div>
+					    	<div class="nome">Matheus Lemos</div>
+				    	</div>
+				    </section>
+			    </div>
+
+
+
+			    <h4 style="color: gray; font-weight: bold;">Comissões</h4>
+				<div class="row">
+					<section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/lewi.jpeg');"></div>
+					    	<div class="cargo">Diretoria de Comunicação</div>
+					    	<div class="nome">Lewi Samuel</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/matrix.jpeg');"></div>
+					    	<div class="cargo">Diretoria de Esportes</div>
+					    	<div class="nome">Diego Della Rocca</div>
+				    	</div>
+				    </section>
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/zukenberg.jpeg');"></div>
+					    	<div class="cargo">Diretoria de Eventos</div>
+					    	<div class="nome">Caio Nunes</div>
+				    	</div>
+				    </section>
+			    </div>
+
+			    <div class="row">
+					<section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/joao.jpeg');"></div>
+					    	<div class="cargo">Diretoria do Sistema de Monitorias</div>
+					    	<div class="nome">João Sousa</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/rebeca.jpeg');"></div>
+					    	<div class="cargo">Diretoria das Minorias</div>
+					    	<div class="nome">Rebeca Martins</div>
+				    	</div>
+				    </section>
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/gabriel.jpeg');"></div>
+					    	<div class="cargo">Diretoria de Recepção dos Calouros</div>
+					    	<div class="nome">Gabriel Alves</div>
+				    	</div>
+				    </section>
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2" style="background-image: url('img-peoples/jota.jpeg');"></div>
+					    	<div class="cargo">Diretor de design</div>
+					    	<div class="nome">Jônatas Gomes</div>
+				    	</div>
+				    </section>
+			    </div>
+
+		  </div>
+		  <div id="calendario-aba" class="col s12">
+		  	<!-- DATAS -->
+		  	<h4 style="color: gray; font-weight: bold;">Datas da campanha</h4>
+		  	<br>
+		  	<section class="row">
+		  		<div class="col s12 m6 l3 dia">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			04/09 até 18/09</b>
+			  		<p>Inscrições de chapa.</p>
+			    </div>
+
+				<div class="col s12 m6 l3 dia">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			18/09 até 25/09</b>
+			  		<p>Campanha das chapas.</p>
+			    </div>		
+
+			    <div class="col s12 m6 l3 dia destaque">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			26/09 até 27/09</b>
+			  		<p>Eleições</p>
+			    </div>	
+
+			    <div class="col s12 m6 l3 dia">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			27/09 até as 22h01</b>
+			  		<p>Apuração</p>
+			    </div> 
+			 </section>
+			 <section class="row">
+			    <div class="col s12 m6 l3 dia">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			01/10</b>
+			  		<p>Recursos</p>
+			    </div>  
+
+			    <div class="col s12 m6 l3 dia">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			03/10</b>
+			  		<p>Apresentação da nova gestão para o DCE</p>
+			    </div> 
+
+			    <div class="col s12 m6 l3 dia">
+		  			<b class="titulo">
+			  			<span class="material-icons">today</span><br>
+			  			01/01 de 2018</b>
+			  		<p>Posse</p>
+			    </div>
+
+			    <h5 style="color: gray; font-weight: bold; padding: 50px;" class="col s12 m12 l12">Duração da gestão: 1 ano a partir da posse.</h5>
+		  	</section>	
+
+
+		  </div>
+		  <div id="contato-aba" class="col s12">
+		  	<h4 style="color: gray; font-weight: bold;">Para mais informações, mande sua mensagem por nossa pagina do Facebook:</h4>
+		  	<a href="https://www.facebook.com/automataCACOMP/" target="_new"><img src="facebook-box.png" style="width: auto;"></a>
+		  </div>
+		
+		
+		</div>
+	</section>
+	<section id="break-gif"></section>
+
+</body>
+</html>
