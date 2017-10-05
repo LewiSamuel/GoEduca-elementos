@@ -158,10 +158,10 @@ DATA: 28 DE SETEMBRO 2017
   font-size: 20px;
   color: #fff;
 }
-.nav-action ul {
+/*.nav-action ul {
     display: flex;
     justify-content: space-around;
-}
+}*/
 .user-view a span{
   color: #0C4048;
 }
