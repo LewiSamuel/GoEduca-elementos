@@ -1,6 +1,14 @@
 (function($){
   $(function(){
-
+  	$('.autopesquisa').hide();
+  	$('.btn-search-go').click(function(){
+  		$('.title-topo, .nav-action, .menu-collapse').hide();
+  		$('.autopesquisa').fadeIn( "slow" );
+  	});
+  	$('.btn-close-go').click(function(){
+  		$('.title-topo, .nav-action, .menu-collapse').fadeIn('slow');
+  		$('.autopesquisa').hide();
+  	});
     $('.button-collapse').sideNav();
     $('.dropdown-button').dropdown({
 	      inDuration: 300,

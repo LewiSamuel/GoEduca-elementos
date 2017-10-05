@@ -27,7 +27,7 @@ a{
   color: #95989A;
 }
 .marca-vot{
-	width: 144px;
+  width: 144px;
 }
 #topo nav{
   line-height: 30px !important;
@@ -43,6 +43,7 @@ a{
 
 .menu-collapse{
   display: none;
+}
 }
 .collection-item .title{
   font-weight: bold; 
@@ -73,7 +74,7 @@ main h2{
   padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+  font-size: inherit;
 }
 .info {
     display: flex;
@@ -115,6 +116,7 @@ DATA: 28 DE SETEMBRO 2017
 }
 #topo .title{
   flex-grow: 4;
+  align-items: center;
   display: flex;
 }
 #topo .title h1{
@@ -325,6 +327,82 @@ DATA: 28 DE SETEMBRO 2017
   }
   
 }
+
+.dropdown-content{
+  min-width: 280px;
+}
+.dropdown-content li > a, .dropdown-content li > span{
+  color: #00A1B0;
+}
+/*PESQUISAR COM AUTOCOMPLETE*/
+.input-field.autopesquisa {
+    margin: 10px 0;
+    padding: 0 15px;
+    width: 100%;
+}
+form.form-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-search {
+    width: 95%;
+}
+input#autocomplete-input {
+  
+    margin: 0 0 0 35px;
+    color:#fff;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 0 1px 0 0 #fff;
+          box-shadow: 0 1px 0 0 #fff;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #fff;
+}
+.autopesquisa i{
+  color: #fff;
+}
+.input-field .prefix.active {
+    color: #fff;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+  border-bottom: 1px solid #fff;
+}
+/*FIM PESQUISAR AUTO*/
+/*CARDS*/
+.btn-floating.halfway-fab{
+  right: 15px;
+}
+footer.page-footer{
+  background-color: #00A1B0;
+}
 @media only screen and (max-width : 992px) {
   header, main, footer {
     padding-left: 0;
@@ -373,16 +451,10 @@ DATA: 28 DE SETEMBRO 2017
     width: 100%;
   }
 }
-.dropdown-content{
-  min-width: 280px;
-}
-.dropdown-content li > a, .dropdown-content li > span{
-  color: #00A1B0;
-}
-footer.page-footer{
-  background-color: #00A1B0;
-}
 @media only screen and (max-width : 400px) {
+  input#autocomplete-input{
+    margin: 0 0 0 10px;
+  }
   .page-footer{
     position: fixed;
     right: 0;
