@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+  .search-bar{
+    border: 1px solid #EEE;
+  }
+
+  .up-small{
+    margin-top: -15px !important;
+  }
+
+  .font-mid{
+    font-size: 18px !important;
+  }
+  .font-small{
+    font-size: 12px !important;
+  }
+</style>
+
+  <title>Register</title>
+  
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="icons.css" rel="stylesheet">
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+
+
+    </head>
+    <body class="grey lighten-5">  
+
+
+
+  <nav class=" white">
+    <section class="container">
+    <div class="row nav-wrapper white">
+      <a href="#" class="brand-logo grey-text text-darken-2"><b>Go Educa</b></a>
+
+      <ul id="nav-mobile" class="right">
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+            <span class="material-icons">file_upload</span>
+          </a>
+        </li>
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+            <span class="material-icons">apps</span>
+          </a>
+        </li>
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+            <span class="material-icons">notifications</span>
+          </a>
+        </li>
+        <li>
+          <a class="grey-text text-darken-2" href="#">
+              <img class="circle" src="rsz_lewi.jpg" width="35px" style="margin-top: 12px;margin-bottom: -12px;">
+          </a>
+        </li>
+      </ul>
+    </div>
+    </section>
+  </nav>
+        
+
+ 
+ <div id="login-page" class="row">
+    <div class="col s12 m6 l4 offset-m3 offset-l4 z-depth-4 card-panel">
+      <form class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <h4>Cadastre-se!</h4>
+            <p class="center">Junte-se ao GoEduca agora!</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">person</i>
+            <input id="nome" type="text">
+            <label for="nome" class="center-align">Nome</label>
+          </div>
+        </div>
+
+         <div class="row up-small">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">person_outline</i>
+            <input id="sobrenome" type="text">
+            <label for="sobrenome" class="center-align">Sobrenome</label>
+          </div>
+        </div>
+
+
+         <div class="row up-small">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">phone</i>
+            <input id="telefone" type="tel">
+            <label for="telefone" class="center-align">Telefone</label>
+          </div>
+        </div>
+
+
+
+        <div class="row up-small">
+          <div class="input-field col s12">
+            <i class="mdi-communication-email prefix material-icons">mail</i>
+             <input id="email" type="email" class="validate" data-error="wrong">
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+
+         <div class="row up-small">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">today</i>
+            <input id="data" type="text" class="datepicker">
+            <label for="data" class="center-align">Data de nascimento</label>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+            $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 15, // Creates a dropdown of 15 years to control year,
+              today: 'Today',
+              clear: 'Clear',
+              close: 'Ok',
+              closeOnSelect: false // Close upon selecting a date,
+            });
+        </script>
+
+        <div class="row">
+            <div class="input-field col s12">
+
+            <i class="mdi-social-person-outline prefix material-icons">face</i>
+              <select>
+                <option value="1">Masculino</option>
+                <option value="2">Feminino</option>
+                <option value="3">Outro</option>
+              </select>
+              <label>Sexo</label>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('select').material_select();
+              });
+        </script>
+
+
+        <div class="row up-small">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">lock</i>
+            <input id="password" type="password">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row up-small">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">lock_outline</i>
+            <input id="password-again" type="password">
+            <label for="password-again">Password again</label>
+          </div>
+        </div>
+
+        <div class="row up-small">
+          <div class="input-field col s12">
+              <form action="#">
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>Foto</span>
+                    <input type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Sua foto">
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+
+      <!--    <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="mdi-social-person-outline prefix material-icons">lock</i>
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Descrição</label>
+                </div>
+              </div>
+            </form>
+          </div> -->
+
+
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">code</i>
+            <input id="code" type="text">
+            <label for="code" class="center-align">Código promocional</label>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="input-field col s12">
+            <a href="index.html" class="btn waves-effect waves-light col s12">Registrar agora</a>
+          </div>
+          <div class="input-field col s12">
+            <p class="margin center medium-small sign-up">Já possui uma conta? <a href="page-login.html">Login</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

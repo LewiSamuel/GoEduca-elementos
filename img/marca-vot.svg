@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4646 1286 301.88 184.756">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-size: 156px;
+        font-family: HelveticaNeue, Helvetica Neue;
+      }
+
+      .cls-2 {
+        fill: #a2a2a2;
+      }
+
+      .cls-4 {
+        fill: #ffc400;
+      }
+
+      .cls-5 {
+        fill: #03a9f4;
+      }
+    </style>
+  </defs>
+  <g id="Group_59" data-name="Group 59" transform="translate(4646 1286)">
+    <text id="ot" class="cls-1" transform="translate(162.88 149)"><tspan x="0" y="0">ot</tspan></text>
+    <rect id="Rectangle_46" data-name="Rectangle 46" class="cls-2" width="130.717" height="130.718" transform="translate(15.902 171.355) rotate(-90)"/>
+    <path id="checked" class="cls-3" d="M50.048,184.442l-53-64.6L54.8,218.169l99.04-144.608Z" transform="translate(36.042 -65.471)"/>
+    <g id="Group_33" data-name="Group 33" transform="translate(0 27.009)">
+      <path id="Path_11" data-name="Path 11" class="cls-4" d="M0,0H96.24V14.045H0Z" transform="translate(0 0)"/>
+      <path id="Path_41" data-name="Path 41" class="cls-4" d="M0,0H93.948V16.265H0Z" transform="translate(0 94.351) rotate(-90)"/>
+    </g>
+    <g id="Group_55" data-name="Group 55" transform="translate(162.691 184.756) rotate(180)">
+      <path id="Path_11-2" data-name="Path 11" class="cls-5" d="M0,0H96.24V14.045H0Z" transform="translate(0 0)"/>
+      <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-5" width="93.948" height="16.265" transform="translate(0 94.351) rotate(-90)"/>
+    </g>
+  </g>
+</svg>
