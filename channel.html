@@ -141,11 +141,10 @@
     <nav class="nav-extended  cyan darken-1 up-small">
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#sobre-aba" class="active">Sobre</a></li>
+        <li class="tab"><a href="#sobre-aba">Sobre</a></li>
         <li class="tab"><a href="#aulas-aba">Aulas</a></li>
-        <li class="tab">
-            <a href="#prof-aba" class="dropdown-button" data-activates='dropdown1'>Professores</a>
-        </li>
+        <li class="tab"><a href="#equipe-aba">Equipe</a></li>
+        <li class="tab"><a href="#upload-aba" class="active">Nova Aula</a></li>
       </ul>
     </div>
   </nav>
@@ -472,7 +471,7 @@
 
 
 
-      <div id="prof-aba" class="col s12">
+      <div id="equipe-aba"col s12">
           <div class="row">
               <p class="grey-text btn-flat text-lighten-1 left">Professores deste canal</p>
             </div>
@@ -488,6 +487,7 @@
                       <div class="col s9">
                         <span class="black-text">
                           <span class="title">Professor 1</span>
+                          </span>
                       </div>
                     </div>
                   </div>
@@ -503,6 +503,7 @@
                       <div class="col s9">
                         <span class="black-text">
                           <span class="title">Professor 2</span>
+                          </span>
                       </div>
                     </div>
                   </div>
@@ -519,14 +520,252 @@
                       <div class="col s9">
                         <span class="black-text">
                           <span class="title">Professor 3</span>
+                          </span>
                       </div>
                     </div>
                   </div>
                 </div>
 
             </section>
+</div>
+
+            <section id="upload-aba" class="col s12">
+              <div class="row">
+                <p class="grey-text btn-flat text-lighten-1 left">Informações da aula</p>
+              </div>
+              <div class="row">
+                  <div class="col s12 m6">
+                    <div class="row">
+
+                        <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">assignment</i>
+                            <select>
+                              <option>Concurso público</option>
+                              <option>Ensino Superior</option>
+                              <option value="1" selected="selected">Ensino Médio</option>
+                              <option value="2">Ensino Fundamental</option>
+                              <option value="3">Ensino Infantil</option>
+                            </select>
+                            <label>Categoria</label>
+                          </div>
+
+
+                   
+
+                        <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">turned_in</i>
+                            <select>
+                              <option>Português</option>
+                              <option>Matemática</option>
+                              <option value="1">O resto</option>
+                              <option value="2">vem</option>
+                              <option value="3">dinâmicamente</option>
+                              <option>do banco</option>
+                              <option>de dados</option>
+                              <option>cê é louco</option>
+                              <option>escrever</option>
+                              <option>as matérias</option>
+                              <option>todas</option>
+                            </select>
+                            <label>Matéria</label>
+                          </div>
+
+
+                 
+                        <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">turned_in_not</i>
+                            <select>
+                              <option>Tema 1</option>
+                              <option>Tema 2</option>
+                              <option value="1">O resto</option>
+                              <option value="2">vem</option>
+                              <option value="3">dinâmicamente</option>
+                              <option>do banco</option>
+                              <option>de dados</option>
+                              <option>cê é louco</option>
+                              <option>escrever</option>
+                              <option>as matérias</option>
+                              <option>todas</option>
+                            </select>
+                            <label>Tema</label>
+                          </div>
+
+
+                        <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">title</i>
+                          <input id="nome" type="text" data-length="60">
+                          <label for="nome" class="center-align">Titulo</label>
+                        </div>
+
+
+                    </div>
+
+
+                  </div>
+                  <div class="col s12 m6">
+
+                        <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">local_library</i>
+                            <select>
+                              <option>Teoria</option>
+                              <option>Exercício</option>
+                              <option>Teoria + Exercício</option>
+                            </select>
+                            <label>Abordagem</label>
+                          </div>
+
+
+                           <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">assessment</i>
+                            <select>
+                              <option>Básico</option>
+                              <option>Intermediário</option>
+                              <option>Avançado</option>
+                            </select>
+                            <label>Dificuldade</label>
+                          </div>
+
+                        <div class="input-field col s12">
+                          <i class="mdi-social-person-outline prefix material-icons">list</i>
+                          <textarea id="textarea1" class="materialize-textarea" data-length="200"></textarea>
+                          <label for="textarea1">Descrição</label>
+                        </div>
+                    
+                  </div>
+              </div>
+
+               <div class="row">
+                <p class="grey-text btn-flat text-lighten-1 left">
+                  Autores desta aula
+                </p>
+              </div>
+              <div class="row up-small">
+                    <div class="input-field col s10 offset-s1">
+                      <select multiple>
+                        <option value="" disabled selected>Selecione os professores(as)</option>
+                        <option value="1" data-icon="lewi.jpeg" class="circle" >Professor 1</option>
+                        <option value="2" data-icon="lewi.jpeg" class="circle" >Professor 2</option>
+                        <option value="3" data-icon="lewi.jpeg" class="circle" >Professor 3</option>
+                        <option value="1" data-icon="lewi.jpeg" class="circle" >Professor 4</option>
+                        <option value="2" data-icon="lewi.jpeg" class="circle" >Professor 5</option>
+                        <option value="3" data-icon="lewi.jpeg" class="circle" >Professor 6</option>
+                      </select>
+                    </div>
+              </div>
+
+              <div class="row">
+                <p class="grey-text btn-flat text-lighten-1 left">
+                  tags da aula
+                </p>
+              </div>
+              <div class="row up-small">
+                  <div class="col s10 offset-s1">
+                        <div class="chip">
+                          Matemática
+                          <i class="close material-icons">close</i>
+                        </div>
+                        <div class="chip">
+                          Portugues
+                          <i class="close material-icons">close</i>
+                        </div>
+                         <div class="chip">
+                          Matemática
+                          <i class="close material-icons">close</i>
+                        </div>
+                        <div class="chip">
+                          Portugues
+                          <i class="close material-icons">close</i>
+                        </div>
+                         <div class="chip">
+                          Matemática
+                          <i class="close material-icons">close</i>
+                        </div>
+                        <div class="chip">
+                          Portugues
+                          <i class="close material-icons">close</i>
+                        </div>
+                         <div class="chip">
+                          Matemática
+                          <i class="close material-icons">close</i>
+                        </div>
+                        <div class="chip">
+                          Portugues
+                          <i class="close material-icons">close</i>
+                        </div>
+                </div>
+              </div>
+              <div class="row up-small">
+               <div class="input-field col s12 m6 l3">
+                  <i class="mdi-social-person-outline prefix material-icons">add</i>
+                  <input id="nome" type="text">
+                  
+                  <label for="nome" class="center-align">Nova Tag</label>
+                </div>
+                <button class="btn">ADD</button>
+              </div>
+
+
+              <div class="row">
+                <p class="grey-text btn-flat text-lighten-1 left">
+                  Arquivos
+                </p>
+              </div>
+              <div class="row up-small">
+
+              <div class="input-field col s12 m6">
+                  <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>VIDEO</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Video aula">
+                      </div>
+                    </div>
+                  </form>
+              </div>
+
+
+              <div class="input-field col s12 m6">
+                  <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>CAPA DO VIDEO</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Capa do video">
+                      </div>
+                    </div>
+                  </form>
+              </div>
+
+
+            </div>
+            <div class="row">
+              <p>
+                Ao clickar em "Publicar Aula" você concorda com os <a href="">Termos de uso</a> do Go Educa.
+              </p>
+              <a class="btn right">Publicar Aula</a>
+            </div>
+
+
+            </section>
+
+
+    <script type="text/javascript">
+            $(document).ready(function() {
+                $('select').material_select();
+              });
+        </script>
 
 
 </section>
 </body>
 </html>
+
+
+
+
+        

@@ -451,10 +451,7 @@ footer.page-footer{
     width: 100%;
   }
 }
-@media only screen and (max-width : 400px) {
-  input#autocomplete-input{
-    margin: 0 0 0 10px;
-  }
+
   .page-footer{
     position: fixed;
     right: 0;
@@ -464,6 +461,13 @@ footer.page-footer{
     -webkit-transition: width 2s, height 4s; /* Safari */
     transition: width 2s, height 4s;
   }
+
+  
+@media only screen and (max-width : 400px) {
+  input#autocomplete-input{
+    margin: 0 0 0 10px;
+  }
+
   footer.page-footer{
     background-color: #003E47 !important;
   }

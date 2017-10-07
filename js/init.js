@@ -1,5 +1,7 @@
 (function($){
   $(function(){
+    
+
   	$('.autopesquisa').hide();
   	$('.btn-search-go').click(function(){
   		$('.title-topo, .nav-action, .menu-collapse').hide();
@@ -9,6 +11,8 @@
   		$('.title-topo, .nav-action, .menu-collapse').fadeIn('slow');
   		$('.autopesquisa').hide();
   	});
+
+
     $('.button-collapse').sideNav();
     $('.dropdown-button').dropdown({
 	      inDuration: 300,
@@ -22,8 +26,13 @@
 	    }
 	  );
 
+
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
   $('.preloader-background').delay(1700).fadeOut('slow');
   
