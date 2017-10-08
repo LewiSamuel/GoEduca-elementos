@@ -169,6 +169,31 @@
 
 
 
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Solicitar mentoria</h4>
+      <br>
+      <p>
+      <div class="input-field col s12">
+        <i class="mdi-social-person-outline prefix material-icons">list</i>
+        <textarea id="textarea1" class="materialize-textarea" placeholder="Dias, horários, disciplinas, assuntos..."></textarea>
+        <label for="textarea1">Informações sobre sua preferência</label>
+      </div>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+      <a href="#!" class="modal-action btn">Solicitar agora</a>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.modal').modal();
+      });
+       
+  </script>
 
 
   <div id="sobre-aba" class="col s12">
@@ -194,8 +219,8 @@
                         <p>R$80/ hora</p>
                       </div>
                       <div class="card-action">
-                        <a href="#">presencial</a>
-                        <a href="#">online</a>
+                        <a class="modal-trigger" href="#modal1">presencial</a>
+                        <a class="modal-trigger" href="#modal1">online</a>
                       </div>
                     </div>
                   
@@ -475,6 +500,23 @@
                     </div>
                   </div>
                 </div>
+
+
+                <div class="col s12 m4 l4">
+                  <div class="card-content white z-depth-0">
+                    <div class="row valign-wrapper">
+                      <div class="col s3">
+                         <a class="btn-floating btn-large waves-effect waves-light disabled"><i class="material-icons">add</i></a>
+                      </div>
+                      <div class="col s9">
+                        <span class="black-text">
+                          <span class="font-mid" style="font-weight: bold;">Novo canal</span><br>
+                          <a href="">Começar a criar</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
            
 
             </section>
@@ -676,6 +718,11 @@
             <a href="" class="secondary-content">
               <div class="btn">Resgatar tudo ( R$150 )</div>
             </a>
+
+            <div class="col s12 red-text center-align">
+              Sem dados suficientes
+            </div>
+
             </li> 
 
             <li class="collection-item avatar">
