@@ -173,13 +173,24 @@
 
 	$(".resize-exit").hide();
 
+
+
+
 	$(".video-controls").hide();
 
-	$(".video_back").mouseover(function(){
+	$("#video_aula, .video-controls").mouseup(function(){
 	  $(".video-controls").show();
 	});
 
-	$(".video_back").mouseout(function(){
+	$("#video_aula, .video-controls").mousedown(function(){
+	  $(".video-controls").hide();
+	});
+
+	$("#video_aula, .video-controls").mouseover(function(){
+	  $(".video-controls").show();
+	});
+
+	$("#video_aula, .video-controls").mouseout(function(){
 	  $(".video-controls").hide();
 	});
 
