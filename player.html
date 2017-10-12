@@ -176,23 +176,41 @@
 
 
 
-	$(".video-controls").hide();
+	$(".video-controls").delay(200).hide(500);
 
-	$("#video_aula, .video-controls").mouseup(function(){
-	  $(".video-controls").show();
+	$("#video_aula").focusin(function(){
+	  $(".video-controls").show().delay(5000).fadeOut(500).focusout();
 	});
 
-	$("#video_aula, .video-controls").mousedown(function(){
-	  $(".video-controls").hide();
+	$("#video_aula").mouseup(function(){
+	  $(".video-controls").show().delay(5000).fadeOut(500).focusout();
 	});
 
-	$("#video_aula, .video-controls").mouseover(function(){
-	  $(".video-controls").show();
+	$("#video_aula").focusout(function(){
+	  $(".video-controls").delay(200).fadeOut(500);
 	});
 
-	$("#video_aula, .video-controls").mouseout(function(){
-	  $(".video-controls").hide();
-	});
+
+
+
+	// $("#video_aula, .video-controls").mouseup(function(){
+	//   $(".video-controls").show(500);
+	// });
+
+	// $("#video_aula").mousedown(function(){
+	//   $(".video-controls").delay(200).hide(500);
+	// });
+
+	// $("#video_aula, .video-controls").mouseover(function(){
+	//   $(".video-controls").show(500);
+	// });
+
+	// $("#video_aula").mouseout(function(){
+	//   $(".video-controls").delay(200).hide(500);
+	// });
+
+
+
 
 	function playVid() { 
 		vid.play();
