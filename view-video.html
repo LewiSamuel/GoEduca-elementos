@@ -9,31 +9,33 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link rel="stylesheet" type="text/css" href="player.css">
 </head>
 <body>
   <div class="preloader-background">
-      <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-red">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div><div class="gap-patch">
-              <div class="circle"></div>
-            </div><div class="circle-clipper right">
-              <div class="circle"></div>
-            </div>
-          </div>
-      </div>
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
   </div>
+</div>
+</div>
 <div class="nav-horizontal">
   <ul id="slide-out" class="side-nav fixed">
     <li>
       <div class="user-view">
-          <div class="background">
-            <img src="img/bkg-navleft-goeduca.png">
-          </div>
-          <a href="#!user"><img class="responsive-img" src="img/marca-azul-escuro.png"></a>
-          <a href="#!name"><span class="name">Bruno Araújo</span></a>
-          <a href="#!email"><span class="email">bruno.araujo@acceleratus.com.br</span></a>
+        <div class="background">
+          <img src="img/bkg-navleft-goeduca.png">
+        </div>
+        <a href="#!user"><img class="responsive-img" src="img/marca-azul-escuro.png"></a>
+        <a href="#!name"><span class="name">Bruno Araújo</span></a>
+        <a href="#!email"><span class="email">bruno.araujo@acceleratus.com.br</span></a>
       </div>
     </li>
     <li class="no-padding"><a href="home.html" class="waves-effect waves-cyan"><i class="material-icons">dashboard</i> Inicial</a></li>
@@ -52,65 +54,104 @@
       </div>
       <h1>TÍTULO DO VIDEO OU CATEGORIA DO VIDEO</h1>
     </div>  
-    <div class="nav-action">
-      <ul>
-        <li>
-          <a href="javascript:;" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Upload" data-activates="translation-dropdown"><i class="material-icons">file_upload</i></a>
-        </li>
-        <li>
-          <a href="javascript:;" class="tooltipped dropdown-button" data-position="bottom" data-delay="50" data-tooltip="Aplicativos"><i class="material-icons">apps</i></a>
-        </li>
-         <li>
-          <a href="javascript:;" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Notificacoes" data-activates="translation-dropdown" data-activates="translation-dropdown"><i class="material-icons">notifications</i></a>
-        </li>
-        <li>
-          <a href="javascript:;" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Sair da conta" data-activates="translation-dropdown" data-activates="translation-dropdown"><i class="material-icons">power_settings_new</i></a>
-        </li>
+
+  </div>
+
+
+
+  <div class="row">
+
+<!--   <div class="video-container video-home">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/P9CKh7TzJUw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+-->
+
+
+
+
+
+<section class="video_back valing-wrapper">
+
+    <video id='video_aula' src='http://104.197.5.108/upfiles/videos/video-na-vertical-Mw==.mp4' poster='http://104.197.5.108/videos/00094746ddcd46479ea748a3c6e130e8-min.png' class="video">
+    </video>
+ 
+
+<!--   <center class="white-text aling-center" style="height: 280px; width: 100%; margin:200px auto 0;">Você precisa estar logado para assistir as aulas <br> Faça <a href="/login">Login</a> ou <a href="/register">Cadastre-se</a>
+  </center>
+ -->
+
+  <section class="video-controls">
+    <div class='container-bar-progresso'>
+      <div class='video-progress-bar float-left'>
+        <div class='video-loader'></div>
+        <div class='video-progress'></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="video-btn left">
+        <i onclick="playVid();" class="material-icons btn-play">play_arrow</i>
+        <i onclick="pauseVid();" class="material-icons btn-pause">pause</i>
+      </div>
+      <div class="video-btn left">
+        <i class="material-icons volume-up" onclick="enableMute();">volume_up</i>
+        <i class="material-icons volume-off" onclick="disableMute();">volume_off</i>
+      </div>
+      <div class="video-btn right">
+        <i class="material-icons resize-full" onclick="fullscreenAtivar();">fullscreen</i>
+        <i class="material-icons resize-exit" onclick="fullscreenDesativar();">fullscreen_exit</i>
+      </div>
+      <div class='video-time right'>
+        <div class='btn-flat disabled no-padding' style="line-height: 27px;">
+          <span class='current'>00:00</span>
+          <span style="color: gray;"> | </span>
+          <span class='duration'>00:00</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</section>
+
+
+
+
+
+<div class="ctrl-video">
+  <div class="ctr-info">
+    <h3>Título do video</h3>
+    <span>Categoria</span>
+  </div>
+  <div class="ctrl-action">
+    <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light green darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Curti"><i class="material-icons">thumb_up</i></a>
+      <span>10</span>
+    </div>
+    <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light red  darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Não curti"><i class="material-icons">thumb_down</i></a>
+      <span>10</span>
+    </div>
+    <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Compartilhar"><i class="material-icons">share</i></a>
+
+    </div>
+    <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Playlist"><i class="material-icons">playlist_add</i></a>
+
+    </div>
+    <div class="ctrl-acao">
+      <a class="btn-floating dropdown-button  waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mais" data-activates='dropMais'><i class="material-icons">picture_as_pdf</i></a>
+      <ul id='dropMais' class='dropdown-content'>
+        <li><a href="#!"><i class="material-icons">picture_as_pdf</i>Arquivo 1</a></li>
+        <li><a href="#!"><i class="material-icons">picture_as_pdf</i>Arquivo 2</a></li>
       </ul>
     </div>
   </div>
-
-
-
-<div class="row">
-  <div class="video-container video-home">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/P9CKh7TzJUw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  <div class="visualizacoes">
+    <h3>15.000</h3>
+    <span>Visualizacoes</span>
   </div>
-  <div class="ctrl-video">
-    <div class="ctr-info">
-      <h3>Título do video</h3>
-      <span>Categoria</span>
-    </div>
-    <div class="ctrl-action">
-      <div class="ctrl-acao">
-        <a class="btn-floating waves-effect waves-light green darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Curti"><i class="material-icons">thumb_up</i></a>
-        <span>10</span>
-      </div>
-      <div class="ctrl-acao">
-        <a class="btn-floating waves-effect waves-light red  darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Não curti"><i class="material-icons">thumb_down</i></a>
-        <span>10</span>
-      </div>
-      <div class="ctrl-acao">
-        <a class="btn-floating waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Compartilhar"><i class="material-icons">share</i></a>
-
-      </div>
-      <div class="ctrl-acao">
-        <a class="btn-floating waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Playlist"><i class="material-icons">playlist_add</i></a>
-
-      </div>
-      <div class="ctrl-acao">
-        <a class="btn-floating dropdown-button  waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mais" data-activates='dropMais'><i class="material-icons">more_horiz</i></a>
-        <ul id='dropMais' class='dropdown-content'>
-          <li><a href="#!"><i class="material-icons">view_module</i>Compartilhar 1</a></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>Compartilhar 2</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="visualizacoes">
-      <h3>15.000</h3>
-      <span>Visualizacoes</span>
-    </div>
-  </div>
+</div>
 </div>
 <section id="identificacao">
   <div class="row">
@@ -118,7 +159,7 @@
       <ul class="collection">
         <li class="collection-item avatar">
           <img src="/src/img/rasc/lewi.jpeg" alt="" class="circle">
-          <span class="title"><b>Nome do meu canal</b></span>
+          <span class="tiProfessor A</span>
           <p>Publicado em 24 de fev de 2017</p>
           <p>60 mil inscritos</p>
           <!-- <a"><i class="material-icons">grade</i></a> -->
@@ -151,11 +192,11 @@
         <li class="collection-item list-acoes avatar">
           <div class="list-acoes-avatar">
             <img src="/src/img/rasc/lewi.jpeg" alt="" class="circle">
-            <span class="title"><b>Nome do meu canal</b></span>
+            <a href="/profile" class="title">Professor A</a>
             <p>Lorem ipsum dolor sit amet, consectetur...</p>
           </div>
           <div class="list-acoes-action">
-          <a class="btn-floating waves-effect waves-light blue-go-2 tooltipped modal-trigger" href="#mentoria" data-position="bottom" data-delay="50" data-tooltip="Solicitar mentoria"><i class="material-icons">portrait</i></a>
+            <a class="btn-floating waves-effect waves-light blue-go-2 tooltipped modal-trigger" href="#mentoria" data-position="bottom" data-delay="50" data-tooltip="Solicitar mentoria"><i class="material-icons">portrait</i></a>
             <a class="btn-floating waves-effect waves-light blue-go tooltipped" data-position="bottom" data-delay="50" data-tooltip="Inscrever-se"><i class="material-icons right">school</i></a>
           </div>
         </li>
@@ -169,7 +210,7 @@
         <li class="collection-item list-acoes avatar">
           <div class="list-acoes-avatar">
             <img src="/src/img/rasc/lewi.jpeg" alt="" class="circle">
-            <span class="title"><b>Nome do meu canal</b></span>
+            <a href="/profile" class="title">Professor A</a>
             <p>Lorem ipsum dolor sit amet, consectetur...</p>
           </div>
           <div class="list-acoes-action">
@@ -183,98 +224,179 @@
 </section>
 
 
-    <!-- Modal Structure -->
-    <div id="mentoria" class="modal">
-      <div class="modal-content">
-        <h4>Solicitar mentoria</h4>
-        <p>
-          <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix material-icons">list</i>
-            <textarea id="textarea1" class="materialize-textarea" placeholder="Dias, horários, disciplinas, assuntos..."></textarea>
-            <label for="textarea1">Informações sobre sua preferência</label>
-          </div>
-        </p>
-        <p class="col s12 m6 l4">
-          <input type="checkbox" id="online">
-          <label for="online">Online</label>
-        </p>
-
-        <p class="col s12 m6 l4">
-          <input type="checkbox" id="presencial">
-          <label for="presencial">Presencial</label>
-        </p>
-
+<!-- Modal Structure -->
+<div id="mentoria" class="modal">
+  <div class="modal-content">
+    <h4>Solicitar mentoria</h4>
+    <p>
+      <div class="input-field col s12">
+        <i class="mdi-social-person-outline prefix material-icons">list</i>
+        <textarea id="textarea1" class="materialize-textarea" placeholder="Dias, horários, disciplinas, assuntos..."></textarea>
+        <label for="textarea1">Informações sobre sua preferência</label>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-        <a href="#!" class="modal-action btn">Solicitar agora</a>
-      </div>
-    </div>
+    </p>
+    <p class="col s12 m6 l4">
+      <input type="checkbox" id="online">
+      <label for="online">Online</label>
+    </p>
+
+    <p class="col s12 m6 l4">
+      <input type="checkbox" id="presencial">
+      <label for="presencial">Presencial</label>
+    </p>
+
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+    <a href="#!" class="modal-action btn">Solicitar agora</a>
+  </div>
+</div>
 
 
 
-    
+
 <div class="row">
   <div class="col s12">
     <h2 class="title-pag">Vídeos relacionados</h2>
   </div>
 </div>
-<div class="row">
-  <div class="col s12 m12">
-    <div class="card horizontal">
-      <div class="card-image">
-        <div class="box-video">
-          <img src="/src/img/rasc/disciplina.jpeg" class="img-destaque responsive-img" alt="Grécia antiga">
-          <div class="box-video-hover">
-            <div class="box-video-action">
-              <a href="javascript:;"><i class="material-icons">play_circle_outline</i></a>
+      <section class="row">
+
+        <div class="col s12 l6">
+          <div class="card row no-margin-b">
+            <div class="col s12 m4 l4 no-padding">
+             <div class="card-image">
+              <div class="box-video">
+                  <img src="materia1.png" class="img-destaque responsive-img" alt="Grécia antiga">
+                  <div class="box-video-hover">
+                      <div class="box-video-action">
+                          <a href="/play"><i class="material-icons">play_circle_outline</i></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m8 l8 truncate-2-ponto-0">
+              <p>
+              <span class="grey-text text-ligthen-1">
+                <p>
+                  <span class="card-title grey-text text-darken-4 col s12 no-padding font-mid">Termodinâmica ENEM</span>
+                  <small class="grey-text col s12 no-padding">Ensino Médio | Física | Termodinâmica</small>
+                  <a href="/channel">Por: Canal do Lewi</a>
+                </p>
+              </span>
+              <span class="font-small">
+              Descrição do video limitada a alguns tantos caracteres por questão de organização e layout do card do video...</span>
+             
+              </p>
+            </div>
+             <a class="btn-floating halfway-fab waves-effect waves-light  tooltipped reposicionando-flag text-green" data-position="bottom" data-delay="50" data-tooltip="Premium" ><i class="material-icons">check_circle</i></a>
+          </div>
+        </div>
+
+          <div class="col s12 l6">
+          <div class="card row no-margin-b">
+            <div class="col s12 m4 l4 no-padding">
+             <div class="card-image">
+              <div class="box-video">
+                  <img src="materia2.png" class="img-destaque responsive-img" alt="Grécia antiga">
+                  <div class="box-video-hover">
+                      <div class="box-video-action">
+                          <a href="/play"><i class="material-icons">play_circle_outline</i></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m8 l8 truncate-2-ponto-0">
+              <p>
+              <span class="grey-text text-ligthen-1">
+                <p>
+                  <span class="card-title grey-text text-darken-4 col s12 no-padding font-mid">Termodinâmica ENEM</span>
+                  <small class="grey-text col s12 no-padding">Ensino Médio | Física | Termodinâmica</small>
+                  <a href="/channel">Por: Canal do Lewi</a>
+                </p>
+              </span>
+              <span class="font-small">
+              Descrição do video limitada a alguns tantos caracteres por questão de organização e layout do card do video...</span>
+             
+
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p><b>Titulo do video</b><br>
-            <small>Nome do canal</small><br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col s12 m12">
-    <div class="card horizontal">
-      <div class="card-image">
-        <div class="box-video">
-          <img src="/src/img/rasc/disciplina.jpeg" class="img-destaque responsive-img" alt="Grécia antiga">
-          <div class="box-video-hover">
-            <div class="box-video-action">
-              <a href="javascript:;"><i class="material-icons">play_circle_outline</i></a>
+
+
+        <div class="col s12 l6">
+          <div class="card row no-margin-b">
+            <div class="col s12 m4 l4 no-padding">
+             <div class="card-image">
+              <div class="box-video">
+                  <img src="materia3.png" class="img-destaque responsive-img" alt="Grécia antiga">
+                  <div class="box-video-hover">
+                      <div class="box-video-action">
+                          <a href="/play"><i class="material-icons">play_circle_outline</i></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m8 l8 truncate-2-ponto-0">
+              <p>
+              <span class="grey-text text-ligthen-1">
+                <p>
+                  <span class="card-title grey-text text-darken-4 col s12 no-padding font-mid">Termodinâmica ENEM</span>
+                  <small class="grey-text col s12 no-padding">Ensino Médio | Física | Termodinâmica</small>
+                  <a href="/channel">Por: Canal do Lewi</a>
+                </p>
+              </span>
+              <span class="font-small">
+              Descrição do video limitada a alguns tantos caracteres por questão de organização e layout do card do video...</span>
+             
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p><b>Titulo do video</b><br>
-            <small>Nome do canal</small><br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
+
+
+        <div class="col s12 l6">
+          <div class="card row no-margin-b">
+            <div class="col s12 m4 l4 no-padding">
+             <div class="card-image">
+              <div class="box-video">
+                  <img src="materia4.png" class="img-destaque responsive-img" alt="Grécia antiga">
+                  <div class="box-video-hover">
+                      <div class="box-video-action">
+                          <a href="/play"><i class="material-icons">play_circle_outline</i></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m8 l8 truncate-2-ponto-0">
+              <p>
+              <span class="grey-text text-ligthen-1">
+                <p>
+                  <span class="card-title grey-text text-darken-4 col s12 no-padding font-mid">Termodinâmica ENEM</span>
+                  <small class="grey-text col s12 no-padding">Ensino Médio | Física | Termodinâmica</small>
+                  <a href="/channel">Por: Canal do Lewi</a>
+                </p>
+              </span>
+              <span class="font-small">
+              Descrição do video limitada a alguns tantos caracteres por questão de organização e layout do card do video...</span>
+             
+              </p>
+            </div>
+             <a class="btn-floating halfway-fab waves-effect waves-light  tooltipped reposicionando-flag text-green" data-position="bottom" data-delay="50" data-tooltip="Premium" ><i class="material-icons">check_circle</i></a>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+      </section>
 
 
+<br><br><br>
 
-  
 </main>
-
-
-
 <footer class="page-footer">
   <div class="footer-copyright">
     <div class="container">
@@ -299,12 +421,13 @@
     </div>
   </div>
 </footer>
-  
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
 
-  </body>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script src="player.js"></script>
+
+</body>
 </html>

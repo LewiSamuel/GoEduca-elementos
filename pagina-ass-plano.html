@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+      <title>GoEduca</title>
+
+      <!-- CSS  -->
+      <link href="icons.css" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body>
+
+
+     <div id="login-page" class="container">
+       <div class="z-depth-4 card-panel">
+        <form class="login-form" method="post">
+
+         <div class="row">
+          <div class="input-field col s12 center">
+            <h4>Escolha um plano!</h4>
+            <p class="center">Adquira um plano premium e tenha mais vantagens!</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix material-icons">code</i>
+            <input id="code" type="text">
+            <label for="code" class="center-align">Código promocional</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+
+            <i class="mdi-social-person-outline prefix material-icons">loyalty</i>
+            <select name="plano">
+              <option value="free">Gratuito ( 15 videos premium por dia )</option>
+              <option value="mensal">R$29,90/Mês - Mensal ( Acesso ilimitado )</option>
+              <option value="semestral">R$14,90/Mês - Semestral  ( Acesso ilimitado )</option>
+              <option value="anual">R$9,90/Mês - Anual  ( Acesso ilimitado )</option>
+            </select>
+            <label>Plano</label>
+
+          </div>
+        </div>
+
+        <div class="row up-small">          
+         <p class="col s12">
+           <input type="checkbox" id="termos" required="required" />
+           <label for="termos">Li e aceito os <a class="teal-text" target="_blank" href="/termos">Termos de Uso</a></label>
+         </p>
+       </div>
+
+       <div class="input-field col s12 center-align">
+         <button type="submit" class="btn waves-effect waves-light col s12" id="submitRegister">Registrar agora</button>
+       </div>
+
+     </form>
+   </div>
+ </div>
+
+ <!--  Scripts-->
+ <script src="jquery-3.2.1.min.js"></script>
+ <script src="js/materialize.js"></script>
+ <script src="js/init.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
+
+</body>
+</html>
