@@ -13,6 +13,9 @@
   <link rel="stylesheet" type="text/css" href="player.css">
 </head>
 <body>
+
+
+
   <div class="preloader-background">
     <div class="preloader-wrapper big active">
       <div class="spinner-layer spinner-red">
@@ -26,6 +29,9 @@
   </div>
 </div>
 </div>
+
+
+
 <div class="nav-horizontal">
   <ul id="slide-out" class="side-nav fixed">
     <li>
@@ -73,33 +79,56 @@
 
 <section class="video_back valing-wrapper">
 
-    <video id='video_aula' src='http://104.197.5.108/upfiles/videos/video-na-vertical-Mw==.mp4' poster='http://104.197.5.108/videos/00094746ddcd46479ea748a3c6e130e8-min.png' class="video">
+    <video id='video_aula' src='publicidade.mp4' poster='video1.png' class="video" onclick="toggleClassVideo()">
     </video>
  
 
 <!--   <center class="white-text aling-center" style="height: 280px; width: 100%; margin:200px auto 0;">Você precisa estar logado para assistir as aulas <br> Faça <a href="/login">Login</a> ou <a href="/register">Cadastre-se</a>
   </center>
  -->
+ <center class="teal-text aling-center img-play" style="height: 280px; width: 100%; margin:200px auto 0; display: none; position: absolute; top: 0; font-size: 50px;"><i class="material-icons">play_arrow_outline</i>
+  </center>
 
-  <section class="video-controls">
+ <section class="publ-controls">
+   <div class="caixinha left">
+     <div class="video-btn left" style="line-height: 50px;">
+        <i onclick="playVid();" class="material-icons btn-play">play_arrow</i>
+        <i onclick="pauseVid();" class="material-icons btn-pause" style="display: none;">pause</i>
+        <i onclick="playVid();" class="material-icons btn-replay" style="display: none;">replay</i>
+      </div>
+   </div>
+
+   <div class="caixinha right">
+     <div class="video-btn left contagem-regressiva" style="line-height: 40px;">
+        Pular anuncio em <span class='currentpubl'></span>
+      </div>
+      <div class="video-btn pular-anuncio" style="line-height: 40px; display: none;" onclick="nextAula();">
+        <b>Pular anuncio agora</b>
+      </div>
+   </div>
+ </section>
+
+  <section class="video-controls hide">
     <div class='container-bar-progresso'>
       <div class='video-progress-bar float-left'>
         <div class='video-loader'></div>
         <div class='video-progress'></div>
       </div>
     </div>
+
     <div class="container">
       <div class="video-btn left">
         <i onclick="playVid();" class="material-icons btn-play">play_arrow</i>
-        <i onclick="pauseVid();" class="material-icons btn-pause">pause</i>
+        <i onclick="pauseVid();" class="material-icons btn-pause" style="display: none;">pause</i>
+        <i onclick="nextAula();" class="material-icons btn-replay" style="display: none;">replay</i>
       </div>
       <div class="video-btn left">
         <i class="material-icons volume-up" onclick="enableMute();">volume_up</i>
-        <i class="material-icons volume-off" onclick="disableMute();">volume_off</i>
+        <i class="material-icons volume-off" onclick="disableMute();" style="display: none;">volume_off</i>
       </div>
       <div class="video-btn right">
         <i class="material-icons resize-full" onclick="fullscreenAtivar();">fullscreen</i>
-        <i class="material-icons resize-exit" onclick="fullscreenDesativar();">fullscreen_exit</i>
+        <i class="material-icons resize-exit" onclick="fullscreenDesativar();" style="display: none;">fullscreen_exit</i>
       </div>
       <div class='video-time right'>
         <div class='btn-flat disabled no-padding' style="line-height: 27px;">

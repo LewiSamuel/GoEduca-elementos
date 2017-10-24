@@ -329,7 +329,7 @@
           text-align: left !important;
         }
 
-         .carousel .indicators .indicator-item.active{
+        .carousel .indicators .indicator-item.active{
           background-color: black;
         }
         
@@ -353,293 +353,381 @@
       <!--        CONTEUDO          -->
 
 
+      <!-- Modal Structure -->
+      <div id="goeduca-apresentacao" class="modal">
+        <div class="modal-content">
+          <h4>Conheça mais sobre o <b>Go Educa</b></h4>
+          <br>
+          <div class="row">
+            <iframe src="https://www.youtube.com/embed/u7vb2jqpkSU?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen="" width="100%" height="250" frameborder="0"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+          <a class="modal-action btn btn-large waves-effect waves-light blue-go tooltipped" data-position="bottom" data-delay="50" data-tooltip="Junte-se ao Go Educa" href="/register"><i class="material-icons right">exit_to_app</i> Experimentar grátis</a>
+        </div>
+      </div>
+
+
+      <!-- Modal Structure -->
+
+      <form id="compra-login" class="modal login-form center-align" action="/include/db-global.php" method="post">
+        <div class="modal-content">
+
+          <input name="func" value="FazerLogin" type="hidden">
+          <input name="aLog" value="" type="hidden">
+
+          <h4>Login</h4>
+          <span id="formCallback"></span>
+
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="mdi-social-person-outline prefix material-icons">person</i>
+              <input id="E-mail" name="email" type="text">
+              <label for="E-mail" class="center-align">E-mail</label>
+            </div>
+          </div>
+
+
+          <div class="row up-small">
+            <div class="input-field col s12">
+              <i class="mdi-action-lock-outline prefix material-icons">lock</i>
+              <input id="senha" name="senha" type="password">
+              <label for="senha">Senha</label>
+            </div>
+          </div>
+
+          <div class="row up-small">          
+           <p class="col s12">
+            <input id="password" type="checkbox">
+            <label for="password">Lembrar-me</label>
+          </p>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col s12 center-align">
+            <button type="submit" href="#!" class="btn waves-effect waves-light">Login</button>
+          </div>
+
+          <div class="col s12 m6 l6">
+            <p class="margin medium-small"><a href="/register">Registrar agora!</a>
+            </p>
+          </div>
+
+          <div class="col s12 m6 l6">
+            <p class="margin right-align medium-small"><a href="page-forgot-password.html">Esqueceu a senha?</a></p>
+          </div>    
+
+        </div>  
+
+
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <div class="section white">
+      <div class="row container center-align">
+        <h1 class="header"><b>Go Educa</b></h1>
+        <h2 class="flow-text">Aprenda rápido quando e
+          onde quiser! <br>
+          Videoaulas curtas com os melhores professores. </h2>
+
+          <a class="btn btn-large waves-effect waves-light blue-go tooltipped" data-position="bottom" data-delay="50" data-tooltip="Junte-se ao Go Educa" href="/register"><i class="material-icons right">exit_to_app</i> Experimentar grátis</a>
+
+          <a class="btn btn-large btn-flat tooltipped modal-trigger" href="#goeduca-apresentacao" data-position="bottom" data-delay="50" data-tooltip="Comece a estudar!"><i class="material-icons right">play_circle_outline</i> Assistir agora</a>
+        </div>
+
+        <div class="row center-align container">
+          <a class="col s12 grey-text text-ligthen-3" href="/makers">
+            Você é professor? Então clique aqui!
+          </a>
+        </div>
+      </div>
+
+
+      <div class="container-image">
+      </div>
+
+
+      <div class="section white">
+        <div class="row container center-align">
+          <h2 class="title">Como funciona?</h2>
+
+          <div class="col s12 m3">
+            <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">access_time</i></a>
+            <b class="title col s12">Aulas curtas</b>
+            <p class="grey-text">Vídeos com duração máxima de 10 minutos. Objetividade e clareza em todas as aulas. </p>
+          </div>
+
+          <div class="col s12 m3">
+            <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">accessibility</i></a>
+            <b class="title col s12">Do seu jeito</b>
+            <p class="grey-text">Escolha seu objetivo e nós te ajudamos a alcançá-lo! Vestibular, ENEM, teste escolar.</p>
+          </div>
+
+          <div class="col s12 m3">
+            <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">announcement</i></a>
+            <b class="title col s12">Consultoria</b>
+            <p class="grey-text">Que tal um consultor educacional só para você? Aqui você contrata com um clique!</p>
+          </div>
+
+          <div class="col s12 m3">
+            <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">book</i></a>
+            <b class="title col s12">Acesso ilimitado</b>
+            <p class="grey-text">Tenha acesso ilimitado a conteúdo de qualidade. Escolha entre dezenas de professores!</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="parallax-container">
+        <div class="parallax"><img src="back-a.png"></div>
+      </div>
+
+      <section class="white container">
+        <div class="row">
+          <section class="plans-container" id="plans">
+
+            <h2 class="title center-align">Planos</h2>
+
+
+            <article class="col s12 m6">
+              <div class="card hoverable">
+                <div class="card-image purple waves-effect">
+                  <div class="card-title">Gratuito</div>
+                  <div class="price"><sup>R$</sup>0<sub>/mês</sub></div>
+                </div>
+                <div class="card-content">
+                  <ul class="collection">
+                    <li class="collection-item">Acesso a todos os vídeos.</li>
+                    <li class="collection-item">Acesso a todos os professores</li>
+                    <li class="collection-item">Acesso a consultores*</li>
+                    <li class="collection-item">Limite de 20 videos/dia.</li>
+                  </ul>
+                </div>
+                <div class="card-action center-align">                      
+                  <a class="waves-effect waves-light btn purple modal-trigger" href="#compra-login">Comprar</a>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="col s12 m6">
+              <div class="card z-depth-1 hoverable">
+                <div class="card-image cyan waves-effect">
+                  <div class="card-title">Mensal</div>
+                  <div class="price"><sup>R$</sup>29,90<sub>/mês</sub></div>
+                </div>
+                <div class="card-content">
+                  <ul class="collection">
+                    <li class="collection-item">Acesso a todos os vídeos.</li>
+                    <li class="collection-item">Acesso a todos os professores.</li>
+                    <li class="collection-item">Acesso a consultores*</li>
+                    <li class="collection-item"><b>Acesso diário ilimitado</b></li>
+                  </ul>
+                </div>
+                <div class="card-action center-align">                      
+                  <a class="waves-effect waves-light btn cyan modal-trigger" href="#compra-login">Comprar</a>
+                </div>
+              </div>
+            </article>
+            <article class="col s12 m6">
+              <div class="card z-depth-1 hoverable">
+                <div class="card-image orange waves-effect">
+                  <div class="card-title">Semestral</div>
+                  <div class="price-desc" style="margin-top:15px; text-decoration: line-through">R$ 24,90/mês</div>
+                  <div class="price"><sup>R$</sup>14,90<sub>/mês</sub></div>
+                  <div class="price-desc">Total: R$ 89,40</div>
+                </div>
+                <div class="card-content">
+                  <ul class="collection">
+                    <li class="collection-item">Acesso a todos os vídeos.</li>
+                    <li class="collection-item">Acesso a todos os professores.</li>
+                    <li class="collection-item">Acesso a consultores*</li>
+                    <li class="collection-item"><b>Acesso diário ilimitado</b></li>
+                  </ul>
+                </div>
+                <div class="card-action center-align">                      
+                  <a class="waves-effect waves-light btn orange modal-trigger" href="#compra-login">Comprar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="col s12 m6">
+              <div class="card hoverable">
+                <div class="card-image green waves-effect">
+                  <div class="card-title">Anual</div>
+                  <div class="price-desc" style="margin-top:15px; text-decoration: line-through">R$ 19,90/mês</div>
+                  <div class="price"><sup>R$</sup>9,90<sub>/mês</sub></div>
+                  <div class="price-desc">Total: R$ 118,80</div>
+                </div>
+                <div class="card-content">
+                  <ul class="collection">
+                    <li class="collection-item">Acesso a todos os vídeos.</li>
+                    <li class="collection-item">Acesso a todos os professores.</li>
+                    <li class="collection-item">Acesso a consultores*</li>
+                    <li class="collection-item"><b>Acesso diário ilimitado</b></li>
+                  </ul>
+                </div>
+                <div class="card-action center-align">                      
+                  <a class="waves-effect waves-light btn green modal-trigger" href="#compra-login">Comprar</a>
+                </div>
+              </div>
+            </article>
+
+            <div class="col s12 grey-text text-ligthen-2 left-align">
+              <small>* Há custo adicional para a contratação de consultores.
+              </small>
+            </div>
+
+          </section>
+        </div>
+      </section>
+
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="back-c.png">
+        </div>
+      </div>
+
+
 
 
 
       <div class="section white">
         <div class="row container center-align">
-          <h1 class="header"><b>Go Educa</b></h1>
-          <h2 class="flow-text">Aprenda rápido quando
-            onde e quiser! <br>
-            Videoaulas curtas com os melhores professores. </h2>
+          <h2 class="title">Acreditam e apoiam o <b>Go Educa</b></h2>
 
-            <a class="btn btn-large waves-effect waves-light blue-go tooltipped" data-position="bottom" data-delay="50" data-tooltip="Junte-se ao Go Educa"><i class="material-icons right">exit_to_app</i> Experimentar grátis</a>
+          <div class="col s12">
+            <div class="carousel valign-wrapper" style="height: 150px;">
 
-            <a class="btn btn-large btn-flat tooltipped" data-position="bottom" data-delay="50" data-tooltip="Comece a estudar!"><i class="material-icons right">play_circle_outline</i> Assistir agora</a>
-          </div>
+              <a class="carousel-item valign-wrapper" style="height: 100px;">
+                <img src="acceleratus.png">
+              </a>
 
-          <div class="row center-align container">
-            <a class="col s12 grey-text text-ligthen-3" href="/makers">
-              Você é professor? Então clique aqui!
-            </a>
-          </div>
-        </div>
+              <a class="carousel-item valign-wrapper" style="height: 100px;">
+                <img src="bmg.png">
+              </a>
 
+              <a class="carousel-item valign-wrapper" style="height: 100px;">
+                <img src="lemonade.png">
+              </a>
 
-        <div class="container-image">
-        </div>
+              <a class="carousel-item valign-wrapper" style="height: 100px;">
+                <img src="compline.png">
+              </a>
 
-
-        <div class="section white">
-          <div class="row container center-align">
-            <h2 class="title">Como funciona?</h2>
-
-            <div class="col s12 m3">
-              <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">access_time</i></a>
-              <b class="title col s12">Aulas curtas</b>
-              <p class="grey-text">Vídeos com duração máxima de 10 minutos. Objetividade e clareza em todas as aulas. </p>
-            </div>
-
-            <div class="col s12 m3">
-              <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">accessibility</i></a>
-              <b class="title col s12">Do seu jeito</b>
-              <p class="grey-text">Escolha seu objetivo e nós te ajudamos a alcançá-lo! Vestibular, ENEM, teste escolar.</p>
-            </div>
-
-            <div class="col s12 m3">
-              <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">announcement</i></a>
-              <b class="title col s12">Consultoria</b>
-              <p class="grey-text">Que tal um consultor educacional só para você? Aqui você contrata com um clique!</p>
-            </div>
-
-            <div class="col s12 m3">
-              <a class="btn-floating btn-large waves-effect waves-light blue-go"><i class="material-icons">book</i></a>
-              <b class="title col s12">Acesso ilimitado</b>
-              <p class="grey-text">Tenha acesso ilimitado a conteúdo de qualidade. Escolha entre dezenas de professores!</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="parallax-container">
-          <div class="parallax"><img src="back-a.png"></div>
-        </div>
-
-        <section class="white container">
-          <div class="row">
-            <section class="plans-container" id="plans">
-
-              <h2 class="title center-align">Planos</h2>
-
-
-              <article class="col s12 m6">
-                <div class="card hoverable">
-                  <div class="card-image purple waves-effect">
-                    <div class="card-title">Gratuito</div>
-                    <div class="price"><sup>R$</sup>0<sub>/mês</sub></div>
-                  </div>
-                  <div class="card-content">
-                    <ul class="collection">
-                      <li class="collection-item">Acesso a todos os vídeos.</li>
-                      <li class="collection-item">Acesso a todos os professores</li>
-                      <li class="collection-item">Acesso a consultores*</li>
-                      <li class="collection-item">Limite de 20 videos/dia.</li>
-                    </ul>
-                  </div>
-                  <div class="card-action center-align">                      
-                    <button class="waves-effect waves-light btn purple">Comprar</button>
-                  </div>
-                </div>
-              </article>
-
-
-              <article class="col s12 m6">
-                <div class="card z-depth-1 hoverable">
-                  <div class="card-image cyan waves-effect">
-                    <div class="card-title">Mensal</div>
-                    <div class="price"><sup>R$</sup>29,90<sub>/mês</sub></div>
-                  </div>
-                  <div class="card-content">
-                    <ul class="collection">
-                      <li class="collection-item">Acesso a todos os vídeos.</li>
-                      <li class="collection-item">Acesso a todos os professores.</li>
-                      <li class="collection-item">Acesso a consultores*</li>
-                      <li class="collection-item"><b>Acesso diário ilimitado</b></li>
-                    </ul>
-                  </div>
-                  <div class="card-action center-align">                      
-                    <button class="waves-effect waves-light btn cyan">Comprar</button>
-                  </div>
-                </div>
-              </article>
-              <article class="col s12 m6">
-                <div class="card z-depth-1 hoverable">
-                  <div class="card-image orange waves-effect">
-                    <div class="card-title">Semestral</div>
-                    <div class="price-desc" style="margin-top:15px; text-decoration: line-through">R$ 24,90/mês</div>
-                    <div class="price"><sup>R$</sup>14,90<sub>/mês</sub></div>
-                    <div class="price-desc">Total: R$ 89,40</div>
-                  </div>
-                  <div class="card-content">
-                    <ul class="collection">
-                      <li class="collection-item">Acesso a todos os vídeos.</li>
-                      <li class="collection-item">Acesso a todos os professores.</li>
-                      <li class="collection-item">Acesso a consultores*</li>
-                      <li class="collection-item"><b>Acesso diário ilimitado</b></li>
-                    </ul>
-                  </div>
-                  <div class="card-action center-align">                      
-                    <button class="waves-effect waves-light btn orange">Comprar</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col s12 m6">
-                <div class="card hoverable">
-                  <div class="card-image green waves-effect">
-                    <div class="card-title">Anual</div>
-                    <div class="price-desc" style="margin-top:15px; text-decoration: line-through">R$ 19,90/mês</div>
-                    <div class="price"><sup>R$</sup>9,90<sub>/mês</sub></div>
-                    <div class="price-desc">Total: R$ 118,80</div>
-                  </div>
-                  <div class="card-content">
-                    <ul class="collection">
-                      <li class="collection-item">Acesso a todos os vídeos.</li>
-                      <li class="collection-item">Acesso a todos os professores.</li>
-                      <li class="collection-item">Acesso a consultores*</li>
-                      <li class="collection-item"><b>Acesso diário ilimitado</b></li>
-                    </ul>
-                  </div>
-                  <div class="card-action center-align">                      
-                    <button class="waves-effect waves-light btn green">Comprar</button>
-                  </div>
-                </div>
-              </article>
-
-              <div class="col s12 grey-text text-ligthen-2 left-align">
-                <small>* Há custo adicional para a contratação de consultores.
-                </small>
-              </div>
-
-            </section>
-          </div>
-        </section>
-
-        <div class="parallax-container">
-          <div class="parallax">
-            <img src="back-c.png">
-          </div>
-        </div>
-
-
-
-
-
-        <div class="section white">
-          <div class="row container center-align">
-            <h2 class="title">Acreditam e apoiam o <b>Go Educa</b></h2>
-
-            <div class="col s12">
-              <div class="carousel valign-wrapper" style="height: 150px;">
-
-                <a class="carousel-item valign-wrapper" style="height: 100px;">
-                  <img src="acceleratus.png">
-                </a>
-
-                <a class="carousel-item valign-wrapper" style="height: 100px;">
-                  <img src="bmg.png">
-                </a>
-
-                <a class="carousel-item valign-wrapper" style="height: 100px;">
-                  <img src="lemonade.png">
-                </a>
-
-                <a class="carousel-item valign-wrapper" style="height: 100px;">
-                  <img src="compline.png">
-                </a>
-
-                <a class="carousel-item valign-wrapper" style="height: 100px;">
+              <a class="carousel-item valign-wrapper" style="height: 100px;">
                 <img src="sd.png">
-                </a>
+              </a>
 
-              </div>
             </div>
-
           </div>
-
-          <div class="row container center-align">
-            <a class="btn btn-large waves-effect waves-light blue-go tooltipped" data-position="bottom" data-delay="50" data-tooltip="Junte-se ao Go Educa"><i class="material-icons right">exit_to_app</i> Experimentar grátis</a>
-
-            <a class="btn btn-large btn-flat tooltipped" data-position="bottom" data-delay="50" data-tooltip="Comece a estudar!"><i class="material-icons right">play_circle_outline</i> Assistir agora</a>
-          </div>
-
-          <div class="row center-align container">
-            <a class="col s12 grey-text text-ligthen-3" href="/makers">
-              Você é professor? Então clique aqui!
-            </a>
-          </div>
-
-
-
-
-
 
         </div>
 
+        <div class="row container center-align">
+          <a class="btn btn-large waves-effect waves-light blue-go tooltipped" data-position="bottom" data-delay="50" data-tooltip="Junte-se ao Go Educa" href="/register"><i class="material-icons right">exit_to_app</i> Experimentar grátis</a>
 
+          <a class="btn btn-large btn-flat tooltipped" data-position="bottom" data-delay="50" data-tooltip="Comece a estudar!"><i class="material-icons right">play_circle_outline</i> Assistir agora</a>
+        </div>
 
+        <div class="row center-align container">
+          <a class="col s12 grey-text text-ligthen-3" href="/makers">
+            Você é professor? Então clique aqui!
+          </a>
+        </div>
 
-
-
-      </main>
-      <div class="hide-on-large-only">
-        <br>
-        <br>
-        <br>
       </div>
-      <footer class="page-footer blue-go hide-on-large-only">
-        <div class="footer-copyright">
-          <div class="container">
-            <div class="action-footer center">
-
-              <a href="#" class="waves-effect waves-cyan">
-                <i class="material-icons">home</i>Inicio
-              </a>
 
 
 
-              <a href="#" class="waves-effect waves-cyan">
-                <i class="material-icons">public</i>Em alta
-              </a>
+
+      <section class="row center-align">
+        <div class="col s12 grey lighten-4 grey-text">
+          <div class="container">GO EDUCA LTDA - ME</div>
+        </div>
+        <div class="col s12 white grey-text">
+          <div class="container"><small>28.843.758/0001-00</small></div>
+        </div>
+      </section>
+
+    </main>
+    
 
 
-              <a href="#" class="waves-effect waves-cyan">
-                <i class="material-icons">school</i>Inscrições
-              </a>
+    <div class="hide-on-large-only">
+      <br>
+      <br>
+      <br>
+    </div>
 
-            </div>
+    <footer class="page-footer blue-go hide-on-large-only">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="action-footer center">
+
+            <a href="#" class="waves-effect waves-cyan">
+              <i class="material-icons">home</i>Inicio
+            </a>
+
+
+
+            <a href="#" class="waves-effect waves-cyan">
+              <i class="material-icons">public</i>Em alta
+            </a>
+
+
+            <a href="#" class="waves-effect waves-cyan">
+              <i class="material-icons">school</i>Inscrições
+            </a>
+
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
 
 
 
-      <script src="jquery-3.2.1.min.js"></script>
-      <script src="js/materialize.js"></script>
-      <script src="js/init.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 
-      <script type="text/javascript">
-        $(document).ready(function(){
+    <script type="text/javascript">
+      $(document).ready(function(){
 
-          $('.parallax').parallax();
+        $('.parallax').parallax();
 
-          $('.carousel').carousel({
-            dist:0,
-            shift:0,
-            padding:20,
-            indicators:true,
-            duration:200
-          });
+        $(".modal").modal();
 
-          autoplay()   
-          function autoplay() {
-            $('.carousel').carousel('next');
-            setTimeout(autoplay, 4500);
-          }      
-
+        $('.carousel').carousel({
+          dist:0,
+          shift:0,
+          padding:20,
+          indicators:true,
+          duration:200
         });
-      </script>
 
-    </body>
-    </html>
+        autoplay()   
+        function autoplay() {
+          $('.carousel').carousel('next');
+          setTimeout(autoplay, 4500);
+        }      
+
+      });
+    </script>
+
+  </body>
+  </html>

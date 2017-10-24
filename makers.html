@@ -17,6 +17,16 @@
     .font-small{
       font-size: 12px !important;
     }
+
+
+    .makers-fab{
+      width: 100px !important;
+      height: 100px !important;
+      background-size: cover !important;
+      background-position: center top !important;
+    }
+
+
   </style>
 
   <title>Makers</title>
@@ -30,7 +40,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body class="grey lighten-5">
+<body class="grey lighten-5" style="background-image: url(textura.png); background-size: 500px; background-attachment: fixed;">
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
@@ -84,7 +94,7 @@
 
 
     <div id="profile-page-header" class="card">
-     <div class="card-content">
+     <div class="card-content transparent">
       <div class="row">
         <div class="col s5 m3 center-align valign-wrapper">
           <a class="circle waves-effect waves-light red" style="width: 100px; height: 100px; margin-bottom: 50px; background: url(lewi.jpeg); background-size: cover; background-position: center top; margin: auto;"></a>
@@ -126,7 +136,7 @@
         <li class="tab"><a href="#sobre-aba" class="active">Sobre</a></li>
         <li class="tab"><a href="#cont-aba">CONTEUDO</a></li>
         <li class="tab">
-        <a href="#mentoria-aba">Mentoria</a>
+          <a href="#mentoria-aba">Mentoria</a>
         </li>
         <li class="tab"><a href="#receita-aba">Receita</a></li>
       </ul>
@@ -142,61 +152,172 @@
 
 
 
-<!-- Modal Structure -->
-<div id="mentoria" class="modal">
-  <div class="modal-content">
-    <h4>Solicitar mentoria</h4>
-    <br>
-    <p>
-      <div class="input-field col s12">
-        <i class="mdi-social-person-outline prefix material-icons">list</i>
-        <textarea id="textarea1" class="materialize-textarea" placeholder="Dias, horários, disciplinas, assuntos..."></textarea>
-        <label for="textarea1">Informações sobre sua preferência</label>
-      </div>
-    </p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-    <a href="#!" class="modal-action btn">Solicitar agora</a>
-  </div>
-</div>
+  <!-- Modal Structure -->
+  <div id="mentoria" class="modal">
+    <div class="modal-content">
+      <h4>Solicitar mentoria</h4>
+      <br>
+      <section class="row">
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(".modal").modal();
-  });
-
-</script>
-
-
-<div id="sobre-aba" class="col s12">
-  <section class="row">
-    <div class="col s12 m4">
-      <ul class="collection">
-        <li class="collection-item">
-          <span class="title">Lewi Samuel Ribeiro</span>
-        </li>
-        <li  class="collection-item">
-          <p class="grey-text">20 anos</p>
-        </li>
-        <li  class="collection-item">
-          <p class="grey-text">Professor desde 2017</p>
-        </li>
-        <li  class="collection-item">
-          <p class="grey-text">arroba.lewi@gmail.com</p>
-        </li>
-      </ul>
-      <div class="card black-text z-depth-1">
-        <div class="card-content">
-          <span class="card-title">Mentoria</span>
-          <p>R$80/ hora</p>
+        <div class="input-field col s12">
+          <i class="mdi-social-person-outline prefix material-icons">assignment</i>
+          <select>
+            <option>Concurso público</option>
+            <option>Ensino Superior</option>
+            <option value="1" selected="selected">Ensino Médio</option>
+            <option value="2">Ensino Fundamental</option>
+            <option value="3">Ensino Infantil</option>
+          </select>
+          <label>Categoria</label>
         </div>
-        <div class="card-action">
-          <a class="modal-trigger" href="#mentoria">Solicitar mentoria</a>
-        </div>
-      </div>
 
+
+
+
+        <div class="input-field col s12">
+          <i class="mdi-social-person-outline prefix material-icons">turned_in</i>
+          <select>
+            <option>Português</option>
+            <option>Matemática</option>
+            <option value="1">O resto</option>
+            <option value="2">vem</option>
+            <option value="3">dinâmicamente</option>
+            <option>do banco</option>
+            <option>de dados</option>
+            <option>cê é louco</option>
+            <option>escrever</option>
+            <option>as matérias</option>
+            <option>todas</option>
+          </select>
+          <label>Matéria</label>
+        </div>
+
+
+
+        <div class="input-field col s12">
+          <i class="mdi-social-person-outline prefix material-icons">turned_in_not</i>
+          <select>
+            <option>Tema 1</option>
+            <option>Tema 2</option>
+            <option value="1">O resto</option>
+            <option value="2">vem</option>
+            <option value="3">dinâmicamente</option>
+            <option>do banco</option>
+            <option>de dados</option>
+            <option>cê é louco</option>
+            <option>escrever</option>
+            <option>as matérias</option>
+            <option>todas</option>
+          </select>
+          <label>Tema</label>
+        </div>
+
+
+        <p class="col s6">
+          <input id="online" type="checkbox">
+          <label for="online">Online</label>
+        </p>
+
+        <p class="col s6">
+          <input id="presencial" type="checkbox" onclick="$('.endereco').toggle();">
+          <label for="presencial">Presencial</label>
+        </p>
+
+        <div class="row endereco" style="display: none;">
+          <div class="input-field col s12 m6">
+            <select id="uf">
+            <option value="" disabled="disabled">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espirito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <label for="uf" class="center-align">UF</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="endereco" type="text">
+            <label for="endereco" class="center-align">Endereço</label>
+          </div>
+        </div>
+
+        <div class="input-field col s6">
+          <input type="text" class="datepicker">
+          <label>Data</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input type="text" class="timepicker">
+          <label>Horário</label>
+        </div>
+
+
+      </section>
     </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+      <a href="#!" class="modal-action btn">Solicitar agora</a>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".modal").modal();
+    });
+
+  </script>
+
+
+  <div id="sobre-aba" class="col s12">
+    <section class="row">
+      <div class="col s12 m4">
+        <ul class="collection">
+          <li class="collection-item">
+            <span class="title">Lewi Samuel Ribeiro</span>
+          </li>
+          <li  class="collection-item">
+            <p class="grey-text">20 anos</p>
+          </li>
+          <li  class="collection-item">
+            <p class="grey-text">Professor desde 2017</p>
+          </li>
+          <li  class="collection-item">
+            <p class="grey-text">arroba.lewi@gmail.com</p>
+          </li>
+        </ul>
+        <div class="card black-text z-depth-1">
+          <div class="card-content">
+            <span class="card-title">Mentoria</span>
+            <p>R$80/ hora</p>
+          </div>
+          <div class="card-action">
+            <a class="modal-trigger" href="#mentoria">Solicitar mentoria</a>
+          </div>
+        </div>
+
+      </div>
       <div class="col s12 m8">
        <ul class="collection">
         <li  class="collection-item">
@@ -439,128 +560,90 @@
   <section class="row up-small">
 
 
-   <div class="col s12 m4 l4">
-    <div class="card-content white z-depth-0">
-      <div class="row valign-wrapper">
-        <div class="col s3">
-          <img src="lewi.jpeg" alt="" class="circle responsive-img"> 
+
+
+
+    <div class="col s12 m6 l4"> <article class="card"> <div class="card-image"> <img src="back.jpg" class="img-destaque responsive-img"> <a class="btn-floating halfway-fab waves-effect waves-light disabled left"><i class="material-icons">add</i></a> </div> <div class="card-content"> <span class="card-title">Criar novo canal</span> <a href="" class="teal-text">Começar a criar</a> </div> </article> </div>
+
+
+
+
+    <div class="col s12 m6 l4"> <article class="card"> <div class="card-image"> <img src="back.jpg" class="img-destaque responsive-img"> <a class="btn-floating halfway-fab waves-effect waves-light disabled left makers-fab" style="background: url(lewi.jpeg);"></a> </div> <div class="card-content"> <span class="card-title">Canal do Lewi</span> <p>Descrição breve do canal</p> </div> </article> </div>
+
+
+
+
+  </section>
+
+  <div class="row up-small">
+    <p class="grey-text btn-flat text-lighten-1 left">Aulas recentes</p>
+  </div>
+  <div class="row">
+    <nav class="white grey-text text-darken-4 col s8 offset-s2">
+      <div class="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required="" placeholder="Procure por uma aula aqui">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <div class="row up-small">
+
+   <div class="col s12 m12">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="materia2.png" style="width: 250px;">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><b>Titulo do video</b><br>
+            <small>Nome do canal</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
         </div>
-        <div class="col s9">
-          <span class="black-text">
-            <span class="font-mid" style="font-weight: bold;">canal 1</span><br>
-            Descrição curta de 140 caracteres ou menos.
-          </span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col s12 m12 up-small">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="materia2.png" style="width: 250px;">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><b>Titulo do video</b><br>
+            <small>Nome do canal</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-
-  <div class="col s12 m4 l4">
-    <div class="card-content white z-depth-0">
-      <div class="row valign-wrapper">
-        <div class="col s3">
-          <img src="lewi.jpeg" alt="" class="circle responsive-img"> 
+  <div class="col s12 m12 up-small">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="materia2.png" style="width: 250px;">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><b>Titulo do video</b><br>
+            <small>Nome do canal</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
         </div>
-        <div class="col s9">
-          <span class="black-text">
-            <span class="font-mid" style="font-weight: bold;">canal 2</span><br>
-            Descrição curta de 140 caracteres ou menos.
-          </span>
-        </div>
       </div>
     </div>
   </div>
-
-
-  <div class="col s12 m4 l4">
-    <div class="card-content white z-depth-0">
-      <div class="row valign-wrapper">
-        <div class="col s3">
-         <a class="btn-floating btn-large waves-effect waves-light disabled"><i class="material-icons">add</i></a>
-       </div>
-       <div class="col s9">
-        <span class="black-text">
-          <span class="font-mid" style="font-weight: bold;">Novo canal</span><br>
-          <a href="">Começar a criar</a>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</section>
-
-<div class="row up-small">
-  <p class="grey-text btn-flat text-lighten-1 left">Aulas recentes</p>
-</div>
-<div class="row">
-  <nav class="white grey-text text-darken-4 col s8 offset-s2">
-    <div class="nav-wrapper">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required="" placeholder="Procure por uma aula aqui">
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
-    </div>
-  </nav>
-</div>
-<div class="row up-small">
-
- <div class="col s12 m12">
-  <div class="card horizontal">
-    <div class="card-image">
-      <img src="materia2.png" style="width: 250px;">
-    </div>
-    <div class="card-stacked">
-      <div class="card-content">
-        <p><b>Titulo do video</b><br>
-          <small>Nome do canal</small><br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="col s12 m12 up-small">
-  <div class="card horizontal">
-    <div class="card-image">
-      <img src="materia2.png" style="width: 250px;">
-    </div>
-    <div class="card-stacked">
-      <div class="card-content">
-        <p><b>Titulo do video</b><br>
-          <small>Nome do canal</small><br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col s12 m12 up-small">
-  <div class="card horizontal">
-    <div class="card-image">
-      <img src="materia2.png" style="width: 250px;">
-    </div>
-    <div class="card-stacked">
-      <div class="card-content">
-        <p><b>Titulo do video</b><br>
-          <small>Nome do canal</small><br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 </div>
@@ -731,6 +814,43 @@
   </ul>
 </div>
 </section>
+
+<!--  Scripts-->
+<script src="jquery-3.2.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('select').material_select();
+    $(".modal").modal();
+
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+      });
+
+    $('.timepicker').pickatime({
+    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+    twelvehour: false, // Use AM/PM or 24-hour format
+    donetext: 'OK', // text for done-button
+    cleartext: 'Clear', // text for clear-button
+    canceltext: 'Cancel', // Text for cancel-button
+    autoclose: false, // automatic close timepicker
+    ampmclickable: true, // make AM PM clickable
+    aftershow: function(){} //Function for after opening timepicker
+  });
+
+  });
+</script>
 
 
 </body>
