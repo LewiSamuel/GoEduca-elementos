@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>GoLab-Play</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link rel="stylesheet" type="text/css" href="player.css">
+</head>
+<body>
+
+
+
+  <div class="preloader-background">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="nav-horizontal">
+  <ul id="slide-out" class="side-nav fixed">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="img/bkg-navleft-goeduca.png">
+        </div>
+        <a href="#!user"><img class="responsive-img" src="img/marca-azul-escuro.png"></a>
+        <a href="#!name"><span class="name">Bruno Araújo</span></a>
+        <a href="#!email"><span class="email">bruno.araujo@acceleratus.com.br</span></a>
+      </div>
+    </li>
+    <li class="no-padding"><a href="home.html" class="waves-effect waves-cyan"><i class="material-icons">dashboard</i> Inicial</a></li>
+    <li><a href="gerenciar-moradores.html" class="waves-effect waves-cyan"><i class="material-icons">supervisor_account</i>Canais</a></li>
+    <li><a href="pesquisar.html" class="waves-effect waves-cyan"><i class="material-icons">view_list</i>Playlist</a></li>
+    <li>
+      <a href="login.html" class="" data-activates="translation-dropdown"><i class="material-icons">power_settings_new</i> Sair do sistema</a>
+    </li>
+  </ul>
+</div>
+<main>
+  <div id="topo">
+    <div class="title">
+      <div class="menu-collapse">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+      
+    </div>  
+
+  </div>
+
+
+
+  <div class="row">
+
+<!--   <div class="video-container video-home">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/P9CKh7TzJUw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+-->
+
+
+
+
+
+<section class="video_back valing-wrapper">
+
+  <video id='video_aula' src='aula.mp4' poster='video1.png' class="video publicidade" onclick="toggleClassVideo()">
+  </video>
+
+
+<!--   <center class="white-text aling-center" style="height: 280px; width: 100%; margin:200px auto 0;">Você precisa estar logado para assistir as aulas <br> Faça <a href="/login">Login</a> ou <a href="/register">Cadastre-se</a>
+  </center>
+-->
+<center class="teal-text aling-center img-play" style="height: 280px; width: 100%; margin:175px auto 0; display: none; position: absolute; top: 0; font-size: 100px;"><img src="play_circle.png" width="100px">
+</center>
+<center class="teal-text aling-center img-pause" style="height: 280px; width: 100%; margin:175px auto 0; display: none; position: absolute; top: 0; font-size: 100px;"><img src="pause_circle.png" width="100px">
+</center>
+
+
+
+
+
+<section class="video-controls">
+  <div class='container-bar-progresso'>
+    <div class='video-progress-bar bar1 float-left'>
+      <div class='video-loader'></div>
+      <div class='video-progress'></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="video-btn left">
+      <i onclick="playVid();" class="material-icons btn-play" style="display: none;">play_arrow</i>
+      <i onclick="pauseVid();" class="material-icons btn-pause">pause</i>
+      <i onclick="nextAula();" class="material-icons btn-replay" style="display: none;">replay</i>
+    </div>
+
+    <div class="video-btn left">
+      <i class="material-icons volume-up" onclick="enableMute();">volume_up</i>
+      <i class="material-icons volume-off" onclick="disableMute();" style="display: none;">volume_off</i>
+    </div>
+    <div class="video-btn right">
+      <i class="material-icons resize-full" onclick="fullscreenAtivar();">fullscreen</i>
+      <i class="material-icons resize-exit" onclick="fullscreenDesativar();" style="display: none;">fullscreen_exit</i>
+    </div>
+    <div class='video-time right'>
+      <div class='btn-flat disabled no-padding' style="line-height: 27px;">
+        <span class='current'>00:00</span>
+        <span style="color: gray;"> | </span>
+        <span class='duration'>00:00</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+</section>
+
+
+
+
+
+<div class="ctrl-video">
+  <div class="ctr-info">
+    <h3>Título do video</h3>
+    <span>Categoria</span>
+  </div>
+  <div class="ctrl-action">
+
+<!--     <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light green darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Curti"><i class="material-icons">thumb_up</i></a>
+      <span>10</span>
+    </div>
+    <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light red  darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Não curti"><i class="material-icons">thumb_down</i></a>
+      <span>10</span>
+    </div>
+    <div class="ctrl-acao">
+      <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&u=http://goeduca.com/play/?video_play=TVRnPQ==%3DTVRnPQ%253D%253D&display=popup&ref=plugin&src=share_button" target="_new" class="btn-floating waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Compartilhar"><i class="material-icons">share</i></a>
+
+    </div>
+    <div class="ctrl-acao">
+      <a class="btn-floating waves-effect waves-light cyan darken-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Playlist"><i class="material-icons">playlist_add</i></a>
+
+    </div> -->
+
+  </div>
+  <div class="visualizacoes">
+    <h3>15.000</h3>
+    <span>Visualizacoes</span>
+  </div>
+</div>
+</div>
+<section id="identificacao">
+  <div class="row">
+    <div class="col s12">
+      <ul class="collection">
+        <li class="collection-item avatar">
+        <img src="lewi.jpeg" alt="" class="circle">
+          <span class="title">Professor A</span>
+          <small>
+            <p>Publicado em 24 de fev de 2017</p>
+            <p>60 mil inscritos</p>
+          </small>
+          <!-- <a"><i class="material-icons">grade</i></a> -->
+        <!--   <div class="secondary-content">
+            <a class="btn-floating waves-effect waves-light amber tooltipped" data-position="bottom" data-delay="50" data-tooltip="Notificação"><i class="material-icons">notifications_active</i></a>                      
+          </div> -->
+
+        </li>
+        <li class="collection-item">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<br><br><br>
+
+</main>
+<footer class="page-footer">
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="action-footer center">
+        <a>
+          <i class="material-icons">list</i>
+          <span>Playlist</span>
+        </a>
+        <a>
+          <i class="material-icons">stars</i>
+          <span>Em destaque</span>
+        </a>
+        <a>
+          <i class="material-icons">subscriptions</i>
+          <span>Canais</span>
+        </a>
+        <a>
+          <i class="material-icons">folder</i>
+          <span>Biblioteca</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script src="player.js"></script>
+
+</body>
+</html>

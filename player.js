@@ -1,6 +1,6 @@
 	
 
-		var vid = document.getElementById("video_aula"); 
+	var vid = document.getElementById("video_aula"); 
 
 	var video = $('#video_aula').get(0); //or
 	var video = $('#video_aula')[0];
@@ -8,7 +8,7 @@
 	//return a jQuery object
 	var video = $('#video_aula');
 
-	var flag = 1;
+	var flag = 0;
 
 	function toggleClassVideo(){
 		if(flag == 1){
@@ -20,16 +20,28 @@
 		}
 	}
 
+	function nextQuest(){
+		$(".div-question").fadeIn(500);
+		$(".video-controls").hide();
+		step=2;
+	}
 
 	function nextAula(){
 		$("#video_aula").attr("src","aula.mp4");
 		$(".publ-controls").hide();
 		$(".video-controls").removeClass("hide");
+		$(".video-controls").show();
+		$(".div-question").hide();
 		vid.play();
+		step=1;
 	}
 
 
 	$(".video-controls").delay(200).hide(500);
+
+	$("#video_aula").hover(function(){
+		$(".video-controls").show().delay(5000).fadeOut(500).focusout();
+	});
 
 	$("#video_aula").focusin(function(){
 		$(".video-controls").show().delay(5000).fadeOut(500).focusout();
@@ -51,13 +63,15 @@
 		$('.btn-play').hide();
 		$('.btn-pause').show(); 
 		$('.btn-replay').hide();
-		$('.img-play').show().delay(500).fadeOut(400);
+		$('.img-play').show().fadeOut(1000);
+		$('.div-question').hide();
 	} 
 
 	function pauseVid() { 
 		vid.pause(); 
 		$('.btn-pause').hide();
-		$('.btn-play').show(); 
+		$('.btn-play').show();
+		$('.img-pause').show().fadeOut(1000); 
 	}
 
 	function enableMute() { 
@@ -196,27 +210,31 @@
 	});
 
 
-
+var step=0;
 
 	//update HTML5 video current play time
-	video.on('timeupdate', function() {
+	video.on('timeupdate', function(){
 	    var currentPos = video[0].currentTime; //Get currenttime
 	    var maxduration = video[0].duration; //Get video duration
 	    var percentage = 100 * currentPos / maxduration; //in %
 	    $('.video-progress').css('width', percentage+'%');
 	    
 	    if(currentPos == maxduration){
-	    	$('.btn-replay').show();
-	    	$('.btn-pause').hide();
+	    	if(step==0){
+		    	nextAula();
+
+	    	}else if(step==1){
+	    		nextQuest();
+	    		step=2;
+	    	}
+	    	
 	    }
-
-
 	});
 
 	
 
 	var timeDrag = false;   /* Drag status */
-	$('.video-progress-bar').mousedown(function(e) {
+	$('.bar1').mousedown(function(e) {
 		timeDrag = true;
 		updatebar(e.pageX);
 	});
@@ -234,7 +252,7 @@
 
 //update Progress Bar control
 var updatebar = function(x) {
-	var progress = $('.video-progress-bar');
+	var progress = $('.bar1');
     var maxduration = video[0].duration; //Video duraiton
     var position = x - progress.offset().left; //Click pos
     var percentage = 100 * position / progress.width();
