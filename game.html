@@ -372,25 +372,28 @@
 
 
 
-    <section class="row">
-
-      <nav class="transparent">
-        <div class="nav-wrapper">
-          <div class="col s12">
-            <a href="#!" class="breadcrumb">Todos os jogos</a>
-            <a href="#!" class="breadcrumb">Matemática</a>
-            <a href="#!" class="breadcrumb">SpaceLog</a>
-          </div>
-        </div>
-      </nav>
-
       <section class="row">
-        <div class="col s12">
-          <h1 class="title-pag">SpaceLog</h1>
+
+
+        <div class="row">
+          <nav class="transparent">
+            <div class="nav-wrapper">
+              <div class="col s12">
+                <a href="#!" class="breadcrumb">Todos os jogos</a>
+                <a href="#!" class="breadcrumb">Matemática</a>
+                <a href="#!" class="breadcrumb">SpaceLog</a>
+              </div>
+            </div>
+          </nav>
         </div>
+        <section class="row">
+          <div class="col s12">
+            <h1 class="title-pag">SpaceLog</h1>
+          </div>
+        </section>
+
       </section>
 
-    </section>
 
 
 
@@ -412,81 +415,80 @@
 
 
 
+    </main>
+    <div class="hide-on-large-only">
+      <br>
+      <br>
+      <br>
+    </div>
+    <footer class="page-footer blue-go hide-on-large-only">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="action-footer center">
 
-  </main>
-  <div class="hide-on-large-only">
-    <br>
-    <br>
-    <br>
-  </div>
-  <footer class="page-footer blue-go hide-on-large-only">
-    <div class="footer-copyright">
-      <div class="container">
-        <div class="action-footer center">
-
-          <a href="#" class="waves-effect waves-cyan">
-            <i class="material-icons">home</i>Inicio
-          </a>
-
+            <a href="#" class="waves-effect waves-cyan">
+              <i class="material-icons">home</i>Inicio
+            </a>
 
 
-          <a href="#" class="waves-effect waves-cyan">
-            <i class="material-icons">public</i>Em alta
-          </a>
+
+            <a href="#" class="waves-effect waves-cyan">
+              <i class="material-icons">public</i>Em alta
+            </a>
 
 
-          <a href="#" class="waves-effect waves-cyan">
-            <i class="material-icons">school</i>Inscrições
-          </a>
+            <a href="#" class="waves-effect waves-cyan">
+              <i class="material-icons">school</i>Inscrições
+            </a>
 
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 
-  <!--  Scripts-->
-  <script src="jquery-3.2.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
+    <!--  Scripts-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
 
-      $('.parallax').parallax();
+        $('.parallax').parallax();
 
-      $(".modal").modal();
+        $(".modal").modal();
 
-      $('select').material_select();
+        $('select').material_select();
 
-      $('.chips').material_chip();
-      $('.chips-initial').material_chip({
-        data: [{
-          tag: 'Apple',
-        }, {
-          tag: 'Microsoft',
-        }, {
-          tag: 'Google',
-        }],
+        $('.chips').material_chip();
+        $('.chips-initial').material_chip({
+          data: [{
+            tag: 'Apple',
+          }, {
+            tag: 'Microsoft',
+          }, {
+            tag: 'Google',
+          }],
+        });
+        $('.chips-placeholder').material_chip({
+          placeholder: 'Enter a tag',
+          secondaryPlaceholder: '+Tag',
+        });
+        $('.chips-autocomplete').material_chip({
+          autocompleteOptions: {
+            data: {
+              'Apple': null,
+              'Microsoft': null,
+              'Google': null
+            },
+            limit: Infinity,
+            minLength: 1
+          }
+        });
+
       });
-      $('.chips-placeholder').material_chip({
-        placeholder: 'Enter a tag',
-        secondaryPlaceholder: '+Tag',
-      });
-      $('.chips-autocomplete').material_chip({
-        autocompleteOptions: {
-          data: {
-            'Apple': null,
-            'Microsoft': null,
-            'Google': null
-          },
-          limit: Infinity,
-          minLength: 1
-        }
-      });
-
-    });
-  </script>
+    </script>
 
 
-</body>
-</html>
+  </body>
+  </html>
