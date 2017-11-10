@@ -396,80 +396,87 @@
         </section>
 
 
-        <div class="col s12 m5 push-m7">
-          <img class="responsive-img" src="space.jpg"></img>
-          <p>SpaceLog é um single player que tem como objetivo destruir todas as repostas erradas para a questão envolvendo Logaritimo proposto no topo da navegação.</p>
-          <p><strong>Data de lançamento:</strong> 07 de Abril de 2016</p>
-          <p><strong>Tamanho:</strong> 10 Mb</p>
-
-
-          <ul class="collection">
-            <li class="collection-item">
-              <a href="!#">
-                Windows (64 Bits)
-                <i class="fa fa-windows left"></i>
-              </a>
-            </li>
-            <li class="collection-item">
-              <a href="!#">
-                Windows (32 Bits)
-                <i class="fa fa-windows left"></i>
-              </a>
-            </li>
-            <li class="collection-item">
-              <a href="!#">
-                Android
-                <i class="fa fa-android left"></i>
-              </a>
-            </li>
-            <li class="collection-item">
-              <a href="!#">
-                Linux
-                <i class="fa fa-linux left"></i>
-              </a>
-            </li>
-            <li class="collection-item">
-              <a href="!#">
-                Mac Os
-                <i class="fa fa-apple left"></i>
-              </a>
-            </li>
-            <li class="collection-item">
-              <a href="!#">
-                Jogar online
-                <i class="fa fa-chrome left"></i>
-              </a>
-            </li>
-          </ul>
-
-        </div>
 
 
 
 
-        <div class="col s12 m7 pull-m5">
+        <div class="col s12">
          <div class="carousel carousel-slider center" data-indicators="true">
-          <div class="carousel-fixed-item center">
-            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+          <div class="carousel-item" style="background-image: url(space.jpg);" href="#!">
           </div>
-          <div class="carousel-item white-text" style="background-image: url(space1.jpg);" href="#one!">
+
+          <div class="carousel-item white-text" style="background-image: url(space1.jpg);" href="#!">
             <h2>First Panel</h2>
             <p class="white-text">This is your first panel</p>
           </div>
-          <div class="carousel-item white-text" style="background-image: url(space2.jpg);" href="#two!">
+
+          <div class="carousel-item white-text" style="background-image: url(space2.jpg);" href="#!">
             <h2>Second Panel</h2>
             <p class="white-text">This is your second panel</p>
           </div>
-          <div class="carousel-item white-text" style="background-image: url(space3.jpg);" href="#three!">
+
+          <div class="carousel-item white-text" style="background-image: url(space3.jpg);" href="#!">
             <h2>Third Panel</h2>
             <p class="white-text">This is your third panel</p>
           </div>
-          <div class="carousel-item white-text" style="background-image: url(space4.jpg);" href="#four!">
+          <div class="carousel-item white-text" style="background-image: url(space4.jpg);" href="#!">
             <h2>Fourth Panel</h2>
             <p class="white-text">This is your fourth panel</p>
           </div>
         </div>
       </div>
+
+
+      <div class="col s12 m7">
+        <p>SpaceLog é um single player que tem como objetivo destruir todas as repostas erradas para a questão envolvendo Logaritimo proposto no topo da navegação.</p>
+        <p><strong>Data de lançamento:</strong> 07 de Abril de 2016</p>
+        <p><strong>Tamanho:</strong> 10 Mb</p>
+      </div>
+      <div class="col s12 m5">
+        <ul class="collection with-header">
+          <li class="collection-header">
+            <div class="btn-flat">Plataformas</div>
+          </li>
+          <li class="collection-item">
+            <a href="!#">
+              Windows (64 Bits)
+              <i class="fa fa-windows left"></i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a href="!#">
+              Windows (32 Bits)
+              <i class="fa fa-windows left"></i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a href="!#">
+              Android
+              <i class="fa fa-android left"></i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a href="!#">
+              Linux
+              <i class="fa fa-linux left"></i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a href="!#">
+              Mac Os
+              <i class="fa fa-apple left"></i>
+            </a>
+          </li>
+          <li class="collection-item">
+            <a href="!#">
+              Jogar online
+              <i class="fa fa-chrome left"></i>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
 
 
     </section>
@@ -541,6 +548,15 @@
       $('select').material_select();
 
       $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+
+      autoplay()   
+      function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 3000);
+      }      
+
+
 
       $('.chips').material_chip();
       $('.chips-initial').material_chip({
