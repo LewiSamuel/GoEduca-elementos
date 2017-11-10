@@ -366,6 +366,10 @@
           font-weight: bold;
         }
 
+        .carousel-item{
+          background-size: cover;
+          background-position: center;
+        }
 
       </style>
 
@@ -374,121 +378,149 @@
 
       <section class="row">
 
-
-        <div class="row">
-          <nav class="transparent">
-            <div class="nav-wrapper">
-              <div class="col s12">
-                <a href="#!" class="breadcrumb">Todos os jogos</a>
-                <a href="#!" class="breadcrumb">Matemática</a>
-                <a href="#!" class="breadcrumb">SpaceLog</a>
-              </div>
+        <nav class="transparent">
+          <div class="nav-wrapper">
+            <div class="col s12">
+              <a href="#!" class="breadcrumb">Todos os jogos</a>
+              <a href="#!" class="breadcrumb">Matemática</a>
+              <a href="#!" class="breadcrumb">SpaceLog</a>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
+        <br>
         <section class="row">
           <div class="col s12">
-            <h1 class="title-pag">SpaceLog</h1>
+            <h1 class="title-pag" style="font-size: 36px;">SpaceLog</h1>
           </div>
         </section>
 
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </main>
-    <div class="hide-on-large-only">
-      <br>
-      <br>
-      <br>
-    </div>
-    <footer class="page-footer blue-go hide-on-large-only">
-      <div class="footer-copyright">
-        <div class="container">
-          <div class="action-footer center">
-
-            <a href="#" class="waves-effect waves-cyan">
-              <i class="material-icons">home</i>Inicio
-            </a>
-
-
-
-            <a href="#" class="waves-effect waves-cyan">
-              <i class="material-icons">public</i>Em alta
-            </a>
-
-
-            <a href="#" class="waves-effect waves-cyan">
-              <i class="material-icons">school</i>Inscrições
-            </a>
-
+        <div class="col s7">
+         <div class="carousel carousel-slider center" data-indicators="true">
+          <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+          </div>
+          <div class="carousel-item white-text" style="background-image: url(space1.jpg);" href="#one!">
+            <h2>First Panel</h2>
+            <p class="white-text">This is your first panel</p>
+          </div>
+          <div class="carousel-item white-text" style="background-image: url(space2.jpg);" href="#two!">
+            <h2>Second Panel</h2>
+            <p class="white-text">This is your second panel</p>
+          </div>
+          <div class="carousel-item white-text" style="background-image: url(space3.jpg);" href="#three!">
+            <h2>Third Panel</h2>
+            <p class="white-text">This is your third panel</p>
+          </div>
+          <div class="carousel-item white-text" style="background-image: url(space4.jpg);" href="#four!">
+            <h2>Fourth Panel</h2>
+            <p class="white-text">This is your fourth panel</p>
           </div>
         </div>
       </div>
-    </footer>
+      <div class="col s5">
+        <img class="responsive-img" src="space.jpg"></img>
+        <p>SpaceLog é um single player que tem como objetivo destruir todas as repostas erradas para a questão envolvendo Logaritimo proposto no topo da navegação.</p>
+      </div>
+
+    </section>
 
 
-    <!--  Scripts-->
-    <script src="jquery-3.2.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
 
-        $('.parallax').parallax();
 
-        $(".modal").modal();
 
-        $('select').material_select();
 
-        $('.chips').material_chip();
-        $('.chips-initial').material_chip({
-          data: [{
-            tag: 'Apple',
-          }, {
-            tag: 'Microsoft',
-          }, {
-            tag: 'Google',
-          }],
-        });
-        $('.chips-placeholder').material_chip({
-          placeholder: 'Enter a tag',
-          secondaryPlaceholder: '+Tag',
-        });
-        $('.chips-autocomplete').material_chip({
-          autocompleteOptions: {
-            data: {
-              'Apple': null,
-              'Microsoft': null,
-              'Google': null
-            },
-            limit: Infinity,
-            minLength: 1
-          }
-        });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+  <div class="hide-on-large-only">
+    <br>
+    <br>
+    <br>
+  </div>
+  <footer class="page-footer blue-go hide-on-large-only">
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="action-footer center">
+
+          <a href="#" class="waves-effect waves-cyan">
+            <i class="material-icons">home</i>Inicio
+          </a>
+
+
+
+          <a href="#" class="waves-effect waves-cyan">
+            <i class="material-icons">public</i>Em alta
+          </a>
+
+
+          <a href="#" class="waves-effect waves-cyan">
+            <i class="material-icons">school</i>Inscrições
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('.parallax').parallax();
+
+      $(".modal").modal();
+
+      $('select').material_select();
+
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+      $('.chips').material_chip();
+      $('.chips-initial').material_chip({
+        data: [{
+          tag: 'Apple',
+        }, {
+          tag: 'Microsoft',
+        }, {
+          tag: 'Google',
+        }],
       });
-    </script>
+      $('.chips-placeholder').material_chip({
+        placeholder: 'Enter a tag',
+        secondaryPlaceholder: '+Tag',
+      });
+      $('.chips-autocomplete').material_chip({
+        autocompleteOptions: {
+          data: {
+            'Apple': null,
+            'Microsoft': null,
+            'Google': null
+          },
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+
+    });
+  </script>
 
 
-  </body>
-  </html>
+</body>
+</html>
