@@ -87,24 +87,58 @@
       text-align: center !important;
       font-size: 14px;
     }
+
+    .login-page{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #003E47;
+      position: fixed;
+      z-index: 1100;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;  
+    }
+    .login-page form{
+      color: white;
+    }
   </style>
 </head>
 <body>
 
 
 
-  <nav style="background-color: #00A1B0;">
-    <div class="nav-wrapper">
+<section class="login-page">
+  <form class="center-align">
+    <small>ACESSO RESTRITO</small>
+    <input type="email" name="" placeholder="Email">
+    <input type="password" name="" placeholder="Senha">
+    <button class="btn blue-go right">Login</button>
+  </form>
+</section>
 
-      <ul class="left">
-        <li>
-          <a class="title">
-            Pagina de apresentação
-          </a>
-        </li>
-      </ul>
 
-      <ul class="right">
+
+
+
+
+
+
+
+
+<nav style="background-color: #00A1B0;">
+  <div class="nav-wrapper">
+
+    <ul class="left">
+      <li>
+        <a class="title">
+          Pagina de apresentação
+        </a>
+      </li>
+    </ul>
+
+    <ul class="right">
  <!--      <li>
         <a>
           <img class="circle responsive-img" src="lewi.jpeg" width="35px" style="margin-bottom: -12px;">
@@ -341,8 +375,8 @@
             <p class="flow-text">
               <span class="font-mid">Daniel Silva</span><br>
               <span class="font-small">Diretor Comercial<br>
-              (61) 9 8269-0026</span>
-            </p>
+                (61) 9 8269-0026</span>
+              </p>
             </span>
           </div>
         </div>
