@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<style type="text/css">
-  .search-bar{
-    border: 1px solid #EEE;
-  }
+  <meta charset="utf-8">
+  <style type="text/css">
+    .search-bar{
+      border: 1px solid #EEE;
+    }
 
-  .up-small{
-    margin-top: -15px !important;
-  }
+    .up-small{
+      margin-top: -15px !important;
+    }
 
-  .font-mid{
-    font-size: 18px !important;
-  }
-  .font-small{
-    font-size: 12px !important;
-  }
-</style>
+    .font-mid{
+      font-size: 18px !important;
+    }
+    .font-small{
+      font-size: 12px !important;
+    }
+  </style>
 
   <title>Register</title>
   
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link href="icons.css" rel="stylesheet">
-
-
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="icons.css" rel="stylesheet">
 
 
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
-    </head>
-    <body class="grey lighten-5">  
+
+
+</head>
+<body class="grey lighten-5">  
 
 
 
   <nav class=" white">
     <section class="container">
-    <div class="row nav-wrapper white">
-      <a href="#" class="brand-logo grey-text text-darken-2"><b>Go Educa</b></a>
+      <div class="row nav-wrapper white">
+        <a href="#" class="brand-logo grey-text text-darken-2"><b>Go Educa</b></a>
 
-      <ul id="nav-mobile" class="right">
-        <li>
-          <a class="grey-text text-darken-2" href="#">
-            <span class="material-icons">file_upload</span>
-          </a>
-        </li>
-        <li>
-          <a class="grey-text text-darken-2" href="#">
-            <span class="material-icons">apps</span>
-          </a>
-        </li>
-        <li>
-          <a class="grey-text text-darken-2" href="#">
-            <span class="material-icons">notifications</span>
-          </a>
-        </li>
-        <li>
-          <a class="grey-text text-darken-2" href="#">
+        <ul id="nav-mobile" class="right">
+          <li>
+            <a class="grey-text text-darken-2" href="#">
+              <span class="material-icons">file_upload</span>
+            </a>
+          </li>
+          <li>
+            <a class="grey-text text-darken-2" href="#">
+              <span class="material-icons">apps</span>
+            </a>
+          </li>
+          <li>
+            <a class="grey-text text-darken-2" href="#">
+              <span class="material-icons">notifications</span>
+            </a>
+          </li>
+          <li>
+            <a class="grey-text text-darken-2" href="#">
               <img class="circle" src="rsz_lewi.jpg" width="35px" style="margin-top: 12px;margin-bottom: -12px;">
-          </a>
-        </li>
-      </ul>
-    </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   </nav>
-        
 
- 
- <div id="login-page" class="row">
+
+
+  <div id="login-page" class="row">
     <div class="col s12 m6 l4 offset-m3 offset-l4 z-depth-4 card-panel">
       <form class="login-form">
         <div class="row">
@@ -92,7 +92,7 @@
           </div>
         </div>
 
-         <div class="row up-small">
+        <div class="row up-small">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix material-icons">person_outline</i>
             <input id="sobrenome" type="text">
@@ -101,7 +101,7 @@
         </div>
 
 
-         <div class="row up-small">
+        <div class="row up-small">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix material-icons">phone</i>
             <input id="telefone" type="tel">
@@ -114,13 +114,13 @@
         <div class="row up-small">
           <div class="input-field col s12">
             <i class="mdi-communication-email prefix material-icons">mail</i>
-             <input id="email" type="email" class="validate" data-error="wrong">
+            <input id="email" type="email" class="validate" data-error="wrong">
             <label for="email">Email</label>
           </div>
         </div>
 
 
-         <div class="row up-small">
+        <div class="row up-small">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix material-icons">today</i>
             <input id="data" type="text" class="datepicker">
@@ -129,20 +129,35 @@
         </div>
 
         <script type="text/javascript">
-            $('.datepicker').pickadate({
-              selectMonths: true, // Creates a dropdown to control month
-              selectYears: 15, // Creates a dropdown of 15 years to control year,
-              today: 'Today',
-              clear: 'Clear',
-              close: 'Ok',
-              closeOnSelect: false // Close upon selecting a date,
-            });
-        </script>
+           var data = new Date();
 
-        <div class="row">
+          $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 50, // Creates a dropdown of 15 years to control year,
+              today: false,
+              clear: 'Limpar',
+              close: 'Ok',
+
+              labelMonthNext: 'Próximo mês',
+              labelMonthPrev: 'Mês anterior',
+              labelMonthSelect: 'Selecione o mês',
+              labelYearSelect: 'Selecione o ano',
+              monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+              monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+              weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado' ],
+              weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+              weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+              closeOnSelect: false, // Close upon selecting a date,
+
+              min: new Date(data.getFullYear() - 1, 0, 1),
+              max: new Date(data.getFullYear() + 1, 11, 31),
+            });
+          </script>
+
+          <div class="row">
             <div class="input-field col s12">
 
-            <i class="mdi-social-person-outline prefix material-icons">face</i>
+              <i class="mdi-social-person-outline prefix material-icons">face</i>
               <select>
                 <option value="1">Masculino</option>
                 <option value="2">Feminino</option>
@@ -150,32 +165,32 @@
               </select>
               <label>Sexo</label>
             </div>
-        </div>
+          </div>
 
-        <script type="text/javascript">
+          <script type="text/javascript">
             $(document).ready(function() {
-                $('select').material_select();
-              });
-        </script>
+              $('select').material_select();
+            });
+          </script>
 
 
-        <div class="row up-small">
-          <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix material-icons">lock</i>
-            <input id="password" type="password">
-            <label for="password">Password</label>
+          <div class="row up-small">
+            <div class="input-field col s12">
+              <i class="mdi-social-person-outline prefix material-icons">lock</i>
+              <input id="password" type="password">
+              <label for="password">Password</label>
+            </div>
           </div>
-        </div>
-        <div class="row up-small">
-          <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix material-icons">lock_outline</i>
-            <input id="password-again" type="password">
-            <label for="password-again">Password again</label>
+          <div class="row up-small">
+            <div class="input-field col s12">
+              <i class="mdi-social-person-outline prefix material-icons">lock_outline</i>
+              <input id="password-again" type="password">
+              <label for="password-again">Password again</label>
+            </div>
           </div>
-        </div>
 
-        <div class="row up-small">
-          <div class="input-field col s12">
+          <div class="row up-small">
+            <div class="input-field col s12">
               <form action="#">
                 <div class="file-field input-field">
                   <div class="btn">
@@ -187,8 +202,8 @@
                   </div>
                 </div>
               </form>
+            </div>
           </div>
-        </div>
 
       <!--    <div class="row">
             <form class="col s12">
@@ -203,31 +218,31 @@
           </div> -->
 
 
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix material-icons">code</i>
-            <input id="code" type="text">
-            <label for="code" class="center-align">Código promocional</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="mdi-social-person-outline prefix material-icons">code</i>
+              <input id="code" type="text">
+              <label for="code" class="center-align">Código promocional</label>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col s12">
-            <p>Ao Clickar em <b>Registrar agora</b> você concorda com os <a href="">Termos de uso</a> do Go Educa.</p>
+          <div class="row">
+            <div class="col s12">
+              <p>Ao Clickar em <b>Registrar agora</b> você concorda com os <a href="">Termos de uso</a> do Go Educa.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="input-field col s12">
-            <a href="index.html" class="btn waves-effect waves-light col s12">Registrar agora</a>
+          <div class="row">
+            <div class="input-field col s12">
+              <a href="index.html" class="btn waves-effect waves-light col s12">Registrar agora</a>
+            </div>
+            <div class="input-field col s12">
+              <p class="margin center medium-small sign-up">Já possui uma conta? <a href="page-login.html">Login</a></p>
+            </div>
           </div>
-          <div class="input-field col s12">
-            <p class="margin center medium-small sign-up">Já possui uma conta? <a href="page-login.html">Login</a></p>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
 
-</body>
-</html>
+  </body>
+  </html>
